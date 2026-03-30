@@ -1,6 +1,10 @@
+using System.Collections;
 using Items;
+using MyPrint;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
@@ -17,11 +21,19 @@ public class PlayerItem : NetworkBehaviour
     public NetworkVariable<bool> haveAnItem = new(false);
     NetworkObject currentItem = null;
     private GameObject visualInstance;
+    
+    [Header("UI")]
+    [SerializeField] private GameObject itemUI;
+    [SerializeField] private Image itemIcon;
+    [SerializeField] private Sprite[] iconSpriteList;
 
     public override void OnNetworkSpawn()
     {
         if(IsOwner)
+        {
             gameObject.name += " " + NetworkManager.LocalClientId;
+            itemUI.SetActive(false);
+        }
     }
     
     public void Update()
@@ -80,11 +92,68 @@ public class PlayerItem : NetworkBehaviour
         
         int i = Random.Range(0, dataItem.itemList.Count);
         
-        itemId = 0;
+        itemId = i;
 
-        SpawnVisualClientRpc(itemId);
+        StartCoroutine(GetNewItemCoroutine(i));
+
 
         haveAnItem.Value = true;
+    }
+
+    IEnumerator GetNewItemCoroutine(int finalIndex)
+    {
+        itemUI.SetActive(true);
+        
+        itemUI.transform.localScale = Vector3.zero;
+
+        float elapsed = 0;
+
+        while (elapsed < 0.25f)
+        {
+            elapsed += Time.deltaTime;
+            itemUI.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, elapsed / 0.25f);
+            yield return null;
+        }
+        
+        int[] indexList = new int[10];
+
+        int ind = 0;
+        
+        int maxIndex = 4;
+
+        for (int i = 0; i < indexList.Length; i++)
+        {
+            indexList[i] = (i % maxIndex);
+        }
+        
+        indexList[^1] = finalIndex;
+
+        float finalIntervalTime = 0.25f;
+        
+        Console.PrintList(indexList, ColorConsole.Orange);
+        
+        for(int i = 0 ; i < indexList.Length ; i++)
+        {
+            itemIcon.sprite = iconSpriteList[indexList[i]];
+            
+            yield return new WaitForSeconds(finalIntervalTime);
+        }
+        
+        SpawnVisualClientRpc(itemId);
+    }
+
+    IEnumerator DropItemUI()
+    {
+        float elapsed = 0.25f;
+        
+        while (elapsed > 0)
+        {
+            elapsed -= Time.deltaTime;
+            itemUI.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, elapsed / 0.25f);
+            yield return null;
+        }
+        
+        itemUI.SetActive(false);
     }
     
     

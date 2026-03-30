@@ -32,6 +32,7 @@ public class KartController : NetworkBehaviour
     [SerializeField] private Transform _kartModel;
     [SerializeField] private Transform _kartNormal;
     [SerializeField] private PlayerHealth _playerHealth;
+    [SerializeField] private Canvas _canvas;
 
     [Header("Settings")]
     [SerializeField] private float _accelForce = 1200f;
@@ -79,7 +80,7 @@ public class KartController : NetworkBehaviour
     [Header("Boost Visual Effects")]
     [SerializeField] private ParticleSystem[] _miniTurboParticles;
     [SerializeField] private GameObject[] _sandParticle;
-
+    
     public Action<float> OnDriftBoost;
     public Action OnDriftStart;
     public Action OnDriftEnd;
@@ -105,6 +106,7 @@ public class KartController : NetworkBehaviour
         if (IsOwner)
         {
             Camera.main.GetComponent<CameraFollow>().Target = transform;
+            _canvas.worldCamera = Camera.main;
         }
     }
 
