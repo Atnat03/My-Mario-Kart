@@ -24,9 +24,6 @@ public class Banana : ItemFactory, IItem
         
         NetworkObject n = controller.GetComponent<NetworkObject>();
         
-        if (playerThrowId == n.NetworkObjectId)
-            return;
-        
         GameManager.instance.AddScore(playerThrowId, 10);
 
         Debug.Log("Applying banana");
