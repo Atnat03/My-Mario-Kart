@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7652a7a15445fd87571718fce8b0b6, type: 3}
+  m_Name: ItemList
+  m_EditorClassIdentifier: 
+  itemList:
+  - id: 0
+    name: Banana
+    prefab: {fileID: 8360661493892388275, guid: 18326a71136137044a9d7ff1ee772569, type: 3}
+    prefabVisual: {fileID: 8360661493892388275, guid: 9d68779042e5d1349a28d27c53b5e700, type: 3}
+  - id: 1
+    name: Green Shell
+    prefab: {fileID: 1850082198326883477, guid: d5d8afdc1d59d5640be2a326d192f166, type: 3}
+    prefabVisual: {fileID: 1850082198326883477, guid: 8c0c4c33297a5ca4e824bcb2e57dfa4b, type: 3}
+  - id: 2
+    name: Red Shell
+    prefab: {fileID: 8636944854088986311, guid: b90528b39e2408948b9e3a739dcb802a, type: 3}
+    prefabVisual: {fileID: 8636944854088986311, guid: d935093a1684b3c409628ca63e895816, type: 3}
+  - id: 3
+    name: Mushroom
+    prefab: {fileID: 5044382480411808204, guid: 99d4ff95dee53854f849549619437556, type: 3}
+    prefabVisual: {fileID: 5310329881752751428, guid: 0e47bf400a133fc48b267244d3da4eb5, type: 3}
