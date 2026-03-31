@@ -11,7 +11,11 @@ public class ScoreManager : NetworkBehaviour
         public ulong playerID;
         public int score;
 
-        public void AddScore(int s) => score += s;
+        public void AddScore(int s)
+        {
+            score += s;
+            if(score < 0) score = 0;
+        }
         
         public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
         {
@@ -110,7 +114,7 @@ public class ScoreManager : NetworkBehaviour
     [Rpc(SendTo.Everyone)]
     private void UpdateUIRpc()
     {
-        var sortedList = playerList.OrderByDescending(p => p.score).ToList();
+        List<PlayerData> sortedList = playerList.OrderByDescending(p => p.score).ToList();
 
         while (_uiElements.Count < sortedList.Count)
         {

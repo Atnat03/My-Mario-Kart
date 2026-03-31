@@ -18,7 +18,7 @@ public class PlayerItem : NetworkBehaviour
 
     public int itemId;
     
-    public NetworkVariable<bool> haveAnItem = new(false);
+    public bool haveAnItem = false;
     NetworkObject currentItem = null;
     private GameObject visualInstance;
     
@@ -40,37 +40,38 @@ public class PlayerItem : NetworkBehaviour
     {
         if (!IsOwner) return;
         
+        if (!GameManager.instance.isStarting.Value)
+            return;
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if(Input.GetKey(KeyCode.LeftControl))
-                DropItemServerRpc(transform.forward, itemPosFront.position, itemPosFront.rotation);
+                DropItemServerRpc(transform.forward, itemPosFront.position, itemPosFront.rotation, true);
             else
             {
-                DropItemServerRpc(-transform.forward, itemPos.position, itemPos.rotation);
+                DropItemServerRpc(-transform.forward, itemPos.position, itemPos.rotation, false);
             }
         }
     }
 
     [Rpc(SendTo.Server)]
-    public void DropItemServerRpc(Vector3 direction, Vector3 pos, Quaternion rot)
+    public void DropItemServerRpc(Vector3 direction, Vector3 pos, Quaternion rot, bool isFront)
     {
-        if (!haveAnItem.Value) return;
+        if (!haveAnItem) return;
 
         currentItem = Instantiate(dataItem.itemList[itemId].prefab, pos, rot).GetComponent<NetworkObject>();
         currentItem.TryRemoveParent();
         currentItem.Spawn();
         
-        
         if (currentItem != null)
         {
-            currentItem.GetComponent<IItem>().DropItem(direction, GetComponent<NetworkObject>());
-            
+            currentItem.GetComponent<IItem>().DropItem(direction, GetComponent<NetworkObject>(), isFront);
             currentItem.GetComponent<ItemFactory>().SetPlayerThrowId(OwnerClientId);
             
             currentItem = null;
         }
 
-        haveAnItem.Value = false;
+        haveAnItem = false;
         itemId = -1;
 
         DropItemClientRpc();
@@ -84,62 +85,77 @@ public class PlayerItem : NetworkBehaviour
             Destroy(visualInstance);
             visualInstance = null;
         }
+        
+        if (IsOwner)
+        {
+            StartCoroutine(DropItemUI());
+        }
     }
 
     public void PickUpNewItem()
     {
-        if (haveAnItem.Value) return;
+        if (haveAnItem) return;
         
         int i = Random.Range(0, dataItem.itemList.Count);
         
-        itemId = i;
-
-        StartCoroutine(GetNewItemCoroutine(i));
-
-
-        haveAnItem.Value = true;
+        PickUpNewItemServerRpc(i);
+    }
+    
+    [Rpc(SendTo.Server)]
+    void PickUpNewItemServerRpc(int itemIndex)
+    {
+        PickUpNewItemClientRpc(itemIndex);
+    }
+    
+    [Rpc(SendTo.Everyone)]
+    void PickUpNewItemClientRpc(int itemIndex)
+    {
+        StartCoroutine(GetNewItemCoroutine(itemIndex));
     }
 
     IEnumerator GetNewItemCoroutine(int finalIndex)
     {
-        itemUI.SetActive(true);
-        
-        itemUI.transform.localScale = Vector3.zero;
-
-        float elapsed = 0;
-
-        while (elapsed < 0.25f)
+        if (IsOwner)
         {
-            elapsed += Time.deltaTime;
-            itemUI.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, elapsed / 0.25f);
-            yield return null;
-        }
-        
-        int[] indexList = new int[10];
+            itemUI.SetActive(true);
+            itemUI.transform.localScale = Vector3.zero;
 
-        int ind = 0;
-        
-        int maxIndex = 4;
+            float elapsed = 0;
 
-        for (int i = 0; i < indexList.Length; i++)
-        {
-            indexList[i] = (i % maxIndex);
-        }
-        
-        indexList[^1] = finalIndex;
-
-        float finalIntervalTime = 0.25f;
-        
-        Console.PrintList(indexList, ColorConsole.Orange);
-        
-        for(int i = 0 ; i < indexList.Length ; i++)
-        {
-            itemIcon.sprite = iconSpriteList[indexList[i]];
+            while (elapsed < 0.25f)
+            {
+                elapsed += Time.deltaTime;
+                itemUI.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, elapsed / 0.25f);
+                yield return null;
+            }
             
-            yield return new WaitForSeconds(finalIntervalTime);
+            int[] indexList = new int[10];
+            int maxIndex = 4;
+
+            for (int i = 0; i < indexList.Length; i++)
+            {
+                indexList[i] = (i % maxIndex);
+            }
+            
+            indexList[^1] = finalIndex;
+
+            float finalIntervalTime = 0.25f;
+            
+            for(int i = 0 ; i < indexList.Length ; i++)
+            {
+                itemIcon.sprite = iconSpriteList[indexList[i]];
+                yield return new WaitForSeconds(finalIntervalTime);
+            }
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.25f + (10 * 0.25f));
         }
         
-        SpawnVisualClientRpc(itemId);
+        haveAnItem = true;
+        itemId = finalIndex;
+        
+        SpawnVisual(finalIndex);
     }
 
     IEnumerator DropItemUI()
@@ -155,12 +171,15 @@ public class PlayerItem : NetworkBehaviour
         
         itemUI.SetActive(false);
     }
-    
-    
-    [Rpc(SendTo.Everyone)]
-    void SpawnVisualClientRpc(int itemId)
+
+    void SpawnVisual(int id)
     {
-        Item item = dataItem.itemList[itemId];
+        if (visualInstance != null)
+        {
+            Destroy(visualInstance);
+        }
+        
+        Item item = dataItem.itemList[id];
 
         visualInstance = Instantiate(item.prefabVisual, itemPos.position, itemPos.rotation);
         visualInstance.transform.SetParent(itemPos);

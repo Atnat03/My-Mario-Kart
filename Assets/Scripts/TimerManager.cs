@@ -28,11 +28,18 @@ public class TimerManager : NetworkBehaviour
 
 	public void StartTimer()
 	{
+		if (!IsServer) return;
+		
 		currentTime.Value = _partyTime;
 		RunTimer();
 	}
 	public void RunTimer() => isRunningGame.Value = true;
-	public void StopTimer()=>isRunningGame.Value = false;
+
+	public void StopTimer()
+	{
+		if (!IsServer) return;
+		isRunningGame.Value = false;
+	}
 
 	void Update()
 	{

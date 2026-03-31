@@ -19,6 +19,8 @@ public class KartController : NetworkBehaviour
     public float CanDrift => Mathf.Abs(_horizontalInput) > 0.3f ? 1 : 0;
     public bool IsDriftPowerFull => _driftPower >= _driftLevel3Price - 10;
     public Rigidbody RB => _rb;
+
+    public bool IsStun => isStuning;
     
     #endregion
     
@@ -95,24 +97,34 @@ public class KartController : NetworkBehaviour
 
     private bool isStuning = false;
     
+    Camera _camera;
+    
     #endregion
 
     #region Fonctions
 
     public override void OnNetworkSpawn()
     {
-        base.OnNetworkSpawn();
-
         if (IsOwner)
         {
             Camera.main.GetComponent<CameraFollow>().Target = transform;
             _canvas.worldCamera = Camera.main;
+            _camera = Camera.main;
         }
+    }
+
+    public void SetTransform(Vector3 position, Quaternion rotation)
+    {
+        transform.position = position;
+        transform.rotation = rotation;
     }
 
     private void Update()
     {
         if (!IsOwner) return;
+
+        if (!GameManager.instance.isStarting.Value)
+            return;
         
         if (isStuning) return;
         
@@ -144,31 +156,15 @@ public class KartController : NetworkBehaviour
     {
         if (!IsOwner) return;
         
+        if (!GameManager.instance.isStarting.Value)
+            return;
+        
         CheckGround();
         Move();
         Turn();
         LimitSpeed();
-        CheckSand();
     }
     
-    private void CheckSand()
-    {
-        if (_grounded && !_boosting)
-        {
-            bool isInSand = !Physics.Raycast(_groundRayPoint.position, -_groundRayPoint.up, out _hitSand, _groundRayLength,
-                LayerMask.NameToLayer("Sand"));
-            
-            if (isInSand)
-            {
-                _rb.linearVelocity *= _sandMultiplicator;
-            }
-            
-            /*foreach (GameObject g in _sandParticle)
-            {
-                g.SetActive(isInSand);
-            }*/
-        }
-    }
 
     #region Movement
 
@@ -188,8 +184,9 @@ public class KartController : NetworkBehaviour
         else
         {
             _rb.linearDamping = 0.1f;
-            _rb.AddForce(Vector3.down * _gravityForce, ForceMode.Acceleration);
         }
+        
+        _rb.AddForce(Vector3.down * _gravityForce, ForceMode.Acceleration);
     }
 
     void Turn()
@@ -232,6 +229,8 @@ public class KartController : NetworkBehaviour
 
     #region Drift
 
+    private Coroutine hopDriftCoroutine = null;
+    
     void StartDrift()
     {
         _isDrifting = true;
@@ -248,8 +247,10 @@ public class KartController : NetworkBehaviour
                 p.Play();
             }
         }
-        
-        StartCoroutine(DriftHopAnimation());
+
+        if(hopDriftCoroutine != null)
+            StopCoroutine(hopDriftCoroutine);
+        hopDriftCoroutine = StartCoroutine(DriftHopAnimation());
     }
 
     void AccumulateDriftPower()
@@ -367,9 +368,12 @@ public class KartController : NetworkBehaviour
     public bool isBoosting = false;
     IEnumerator DriftBoostCoroutine(float boostForce, int level)
     {
-        isBoosting = true;
+        if(_camera.TryGetComponent(out CameraEffects effet))
+            effet.BoostFOV();
         
         _rb.AddForce(transform.forward * boostForce, ForceMode.Impulse);
+        
+        isBoosting = true;
         
         foreach (ParticleSystem p in _miniTurboParticles) 
         {
@@ -378,20 +382,8 @@ public class KartController : NetworkBehaviour
         
         float boostDuration = 0.5f + (level * 0.5f);
         
-        yield return new WaitForSeconds(boostDuration * 0.5f);
+        yield return new WaitForSeconds(boostDuration);
         
-        float elapsed = 0f;
-        float decelerationTime = boostDuration * 0.5f;
-        Vector3 startVelocity = _rb.linearVelocity;
-        
-        while (elapsed < decelerationTime)
-        {
-            elapsed += Time.fixedDeltaTime;
-            float t = elapsed / decelerationTime;
-            _rb.linearVelocity = Vector3.Lerp(startVelocity, startVelocity * 0.5f, t);
-            yield return new WaitForFixedUpdate();
-        }
-
         isBoosting = false;
     }
 
@@ -470,6 +462,7 @@ public class KartController : NetworkBehaviour
     IEnumerator DriftHopAnimation()
     {
         if (_kartNormal == null) yield break;
+        if (!_isDrifting) yield break;
         
         Vector3 startPos = _kartNormal.localPosition;
         Vector3 hopPos = startPos + Vector3.up * 0.2f;
@@ -486,6 +479,7 @@ public class KartController : NetworkBehaviour
         }
         
         _kartNormal.localPosition = startPos;
+        hopDriftCoroutine = null;
     }
 
     IEnumerator ResetKartRotation()
@@ -508,33 +502,6 @@ public class KartController : NetworkBehaviour
     }
 
     #endregion
-    
-    public void Reset()
-    {
-        StopAllCoroutines();
-    
-        _horizontalInput = 0;
-        _verticalInput = 0;
-        _canDrift = false;
-        _isDrifting = false;
-        _driftPower = 0;
-        _currentDriftLevel = 0;
-        _driftDirection = 0;
-
-        _rb.linearVelocity = Vector3.zero;
-        _rb.angularVelocity = Vector3.zero;
-
-        _kartNormal.localRotation = Quaternion.identity;
-        _kartNormal.localPosition = Vector3.zero;
-        
-        _kartModel.localEulerAngles = Vector3.zero;
-        _kartModel.localRotation = Quaternion.identity;
-
-        foreach (ParticleSystem p in _driftParticles) p.Stop();
-        foreach (ParticleSystem p in _driftFlashParticles) p.Stop();
-        foreach (ParticleSystem p in _miniTurboParticles) p.Stop();
-
-    }
     #endregion
     
     #region Stunning
@@ -595,5 +562,11 @@ public class KartController : NetworkBehaviour
     {
         Debug.Log("Mush Boost");
         StartCoroutine(DriftBoostCoroutine(3000, 3));
+    }
+
+    public void BoostFromAway(float value)
+    {
+        StartCoroutine(DriftBoostCoroutine(value, 3));
+
     }
 }

@@ -15,7 +15,7 @@ namespace Items
 
     public interface IItem
     {
-        public void DropItem(Vector3 direction,NetworkObject Thrower);
+        public void DropItem(Vector3 direction,NetworkObject Thrower, bool isFront);
         public void ApplyEffect(KartController controller);
     }
 
@@ -23,6 +23,8 @@ namespace Items
     public abstract class ItemFactory : NetworkBehaviour
     {
         protected ulong playerThrowId;
+
+        [SerializeField] protected int _scoreGain = 10;
         
         public void SetPlayerThrowId(ulong playerThrowID) => playerThrowId = playerThrowID;
         

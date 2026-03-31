@@ -1,0 +1,1036 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 19.03.2022 19:27:50
+
+newmtl bc1_AsphaltDark
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Asphalt_Alb2.png
+	map_Kd sfcbc1_Asphalt_Alb2.png
+	map_d sfcbc1_Asphalt_Alb2.png
+
+newmtl bc1_AsphaltLight
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Asphalt_Alb.png
+	map_Kd sfcbc1_Asphalt_Alb.png
+	map_d sfcbc1_Asphalt_Alb.png
+
+newmtl bc1_ColorBlock
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_ColorBlock_Alb.png
+	map_Kd sfcbc1_ColorBlock_Alb.png
+	map_d sfcbc1_ColorBlock_Alb.png
+
+newmtl bc1_BlueWood
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_BlueWood_Alb.png
+	map_Kd sfcbc1_BlueWood_Alb.png
+	map_d sfcbc1_BlueWood_Alb.png
+
+newmtl bc1_CenterGate
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_CenterGate_Alb.png
+	map_Kd sfcbc1_CenterGate_Alb.png
+	map_d sfcbc1_CenterGate_Alb.png
+
+newmtl bc1_CliffOutside
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_CliffOutside_Alb.png
+	map_Kd sfcbc1_CliffOutside_Alb.png
+	map_d sfcbc1_CliffOutside_Alb.png
+
+newmtl bc1_FlagPole
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_FlagPole_Alb.png
+	map_Kd sfcbc1_FlagPole_Alb.png
+	map_d sfcbc1_FlagPole_Alb.png
+
+newmtl bc1_Cushion
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Cushion_Alb.png
+	map_Kd sfcbc1_Cushion_Alb.png
+	map_d sfcbc1_Cushion_Alb.png
+
+newmtl bc1_TireYellow
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Tire_Y_Alb.png
+	map_Kd sfcbc1_Tire_Y_Alb.png
+	map_d sfcbc1_Tire_Y_Alb.png
+
+newmtl bc1_TireRed
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Tire_R_Alb.png
+	map_Kd sfcbc1_Tire_R_Alb.png
+	map_d sfcbc1_Tire_R_Alb.png
+
+newmtl bc1_TireGreen
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Tire_G_Alb.png
+	map_Kd sfcbc1_Tire_G_Alb.png
+	map_d sfcbc1_Tire_G_Alb.png
+
+newmtl bc1_TireBlue
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Tire_B_Alb.png
+	map_Kd sfcbc1_Tire_B_Alb.png
+	map_d sfcbc1_Tire_B_Alb.png
+
+newmtl ef_dashboard
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ef_dashboard02_Alb.png
+	map_Kd ef_dashboard02_Alb.png
+	map_d ef_dashboard02_Alb.png
+	map_refl ef_dashboard01_Alb.png
+
+newmtl bc1_DenkoKeijiban
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_DekoKeijiban_Alb.png
+	map_Kd sfcbc1_DekoKeijiban_Alb.png
+	map_d sfcbc1_DekoKeijiban_Alb.png
+
+newmtl bc1_Monitor
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Monitor_Alb.png
+	map_Kd sfcbc1_Monitor_Alb.png
+	map_d sfcbc1_Monitor_Alb.png
+
+newmtl bc1_ScrollLight
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_ScrollLight_Alb.png
+	map_Kd sfcbc1_ScrollLight_Alb.png
+	map_d sfcbc1_ScrollLight_Alb.png
+
+newmtl bc1_TireBase
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TireBase_Alb.png
+	map_Kd sfcbc1_TireBase_Alb.png
+	map_d sfcbc1_TireBase_Alb.png
+
+newmtl bc1_DokanGreen
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Dokan_Green_Alb.png
+	map_Kd sfcbc1_Dokan_Green_Alb.png
+	map_d sfcbc1_Dokan_Green_Alb.png
+
+newmtl bc1_WoodPlate
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_WoodPlate_Alb.png
+	map_Kd sfcbc1_WoodPlate_Alb.png
+	map_d sfcbc1_WoodPlate_Alb.png
+
+newmtl bc1_OutsideFream
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_OutsideFream_Alb.png
+	map_Kd sfcbc1_OutsideFream_Alb.png
+	map_d sfcbc1_OutsideFream_Alb.png
+
+newmtl bc1_FlagRope
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_FlagRope_Alb.png
+	map_Kd sfcbc1_FlagRope_Alb.png
+	map_d sfcbc1_FlagRope_Alb.png
+
+newmtl bc1_ForestEnkei
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_ForestEnkei_Alb.png
+	map_Kd sfcbc1_ForestEnkei_Alb.png
+	map_d sfcbc1_ForestEnkei_Alb.png
+
+newmtl ef_glideboard
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ef_glideboard02_Alb.png
+	map_Kd ef_glideboard02_Alb.png
+	map_d ef_glideboard02_Alb.png
+	map_refl ef_glideboard01_Alb.png
+
+newmtl bc1_kanban
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_kanban_Alb.png
+	map_Kd sfcbc1_kanban_Alb.png
+	map_d sfcbc1_kanban_Alb.png
+
+newmtl bc1_PipeFrameBlue
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_PipeFrame_Blue_Alb.png
+	map_Kd sfcbc1_PipeFrame_Blue_Alb.png
+	map_d sfcbc1_PipeFrame_Blue_Alb.png
+
+newmtl bc1_PipeFrameGreen
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_PipeFrame_Green_Alb.png
+	map_Kd sfcbc1_PipeFrame_Green_Alb.png
+	map_d sfcbc1_PipeFrame_Green_Alb.png
+
+newmtl bc1_PipeFrameRed
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_PipeFrame_Red_Alb.png
+	map_Kd sfcbc1_PipeFrame_Red_Alb.png
+	map_d sfcbc1_PipeFrame_Red_Alb.png
+
+newmtl bc1_PipeFrameYellow
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_PipeFrame_Yellow_Alb.png
+	map_Kd sfcbc1_PipeFrame_Yellow_Alb.png
+	map_d sfcbc1_PipeFrame_Yellow_Alb.png
+
+newmtl bc1_plantA_outside
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_PlantA_Alb.png
+	map_Kd sfcbc1_PlantA_Alb.png
+	map_d sfcbc1_PlantA_Alb.png
+
+newmtl bc1_plantA
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_PlantA_Alb.png
+	map_Kd sfcbc1_PlantA_Alb.png
+	map_d sfcbc1_PlantA_Alb.png
+
+newmtl bc1_Pylon
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Pylon_Alb.png
+	map_Kd sfcbc1_Pylon_Alb.png
+	map_d sfcbc1_Pylon_Alb.png
+
+newmtl bc1_RedWood
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_ColorWood_red_Alb.png
+	map_Kd sfcbc1_ColorWood_red_Alb.png
+	map_d sfcbc1_ColorWood_red_Alb.png
+
+newmtl bc1_GreenWood
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_ColorWood_green_Alb.png
+	map_Kd sfcbc1_ColorWood_green_Alb.png
+	map_d sfcbc1_ColorWood_green_Alb.png
+
+newmtl bc1_YellowWood
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_ColorWood_yellow_Alb.png
+	map_Kd sfcbc1_ColorWood_yellow_Alb.png
+	map_d sfcbc1_ColorWood_yellow_Alb.png
+
+newmtl bc1_RoadLine
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_RoadLine_Alb.png
+	map_Kd sfcbc1_RoadLine_Alb.png
+	map_d sfcbc1_RoadLine_Alb.png
+
+newmtl bc1_RoadParts
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_RoadParts_Alb.png
+	map_Kd sfcbc1_RoadParts_Alb.png
+	map_d sfcbc1_RoadParts_Alb.png
+
+newmtl bc1_RogoNuki
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_RogoNuki_Alb.png
+	map_Kd sfcbc1_RogoNuki_Alb.png
+	map_d sfcbc1_RogoNuki_Alb.png
+
+newmtl bc1_SakuBlue
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Saku_blue_Alb.png
+	map_Kd sfcbc1_Saku_blue_Alb.png
+	map_d sfcbc1_Saku_blue_Alb.png
+
+newmtl bc1_SakuYellow
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Saku_yellow_Alb.png
+	map_Kd sfcbc1_Saku_yellow_Alb.png
+	map_d sfcbc1_Saku_yellow_Alb.png
+
+newmtl bc1_SakuRed
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Saku_red_Alb.png
+	map_Kd sfcbc1_Saku_red_Alb.png
+	map_d sfcbc1_Saku_red_Alb.png
+
+newmtl bc1_SakuGreen
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Saku_green_Alb.png
+	map_Kd sfcbc1_Saku_green_Alb.png
+	map_d sfcbc1_Saku_green_Alb.png
+
+newmtl bc1_obj01
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_obj01_Alb.png
+	map_Kd sfcbc1_obj01_Alb.png
+	map_d sfcbc1_obj01_Alb.png
+
+newmtl bc1_StaticShadow
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl bc1_obj02
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_obj02_Alb.png
+	map_Kd sfcbc1_obj02_Alb.png
+	map_d sfcbc1_obj02_Alb.png
+
+newmtl bc1_TreeB_miki
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TreeB_miki_Alb.png
+	map_Kd sfcbc1_TreeB_miki_Alb.png
+	map_d sfcbc1_TreeB_miki_Alb.png
+
+newmtl bc1_TreeB_LeafBase
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TreeB_LeafBase_Alb.png
+	map_Kd sfcbc1_TreeB_LeafBase_Alb.png
+	map_d sfcbc1_TreeB_LeafBase_Alb.png
+
+newmtl bc1_TreeB_leaf
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TreeB_Leaf_Alb.png
+	map_Kd sfcbc1_TreeB_Leaf_Alb.png
+	map_d sfcbc1_TreeB_Leaf_Alb.png
+
+newmtl bc1_TreeB_FakeLeaf
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TreeB_FakeLeaf_Alb.png
+	map_Kd sfcbc1_TreeB_FakeLeaf_Alb.png
+	map_d sfcbc1_TreeB_FakeLeaf_Alb.png
+
+newmtl bc1_TreeB_plane
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_PlaneTree_Alb.png
+	map_Kd sfcbc1_PlaneTree_Alb.png
+	map_d sfcbc1_PlaneTree_Alb.png
+
+newmtl bc1_SandRoad
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_SandRoad_Alb.png
+	map_Kd sfcbc1_SandRoad_Alb.png
+	map_d sfcbc1_SandRoad_Alb.png
+
+newmtl bc1_GrassOutside
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_grass_Alb.png
+	map_Kd sfcbc1_grass_Alb.png
+	map_d sfcbc1_grass_Alb.png
+
+newmtl bc1_BigKanbanFream
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_BigKanbanFream_Alb.png
+	map_Kd sfcbc1_BigKanbanFream_Alb.png
+	map_d sfcbc1_BigKanbanFream_Alb.png
+
+newmtl bc1_TeamKanban_Green
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TeamKanban_Green_Alb.png
+	map_Kd sfcbc1_TeamKanban_Green_Alb.png
+	map_d sfcbc1_TeamKanban_Green_Alb.png
+
+newmtl bc1_TeamKanban_Yellow
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TeamKanban_Yeliow_Alb.png
+	map_Kd sfcbc1_TeamKanban_Yeliow_Alb.png
+	map_d sfcbc1_TeamKanban_Yeliow_Alb.png
+
+newmtl bc1_TeamKanban_Red
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TeamKanban_Red_Alb.png
+	map_Kd sfcbc1_TeamKanban_Red_Alb.png
+	map_d sfcbc1_TeamKanban_Red_Alb.png
+
+newmtl bc1_TeamKanban_Blue
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_TeamKanban_Blue_Alb.png
+	map_Kd sfcbc1_TeamKanban_Blue_Alb.png
+	map_d sfcbc1_TeamKanban_Blue_Alb.png
+
+newmtl bc1_pipe
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_pipe_Alb.png
+	map_Kd sfcbc1_pipe_Alb.png
+	map_d sfcbc1_pipe_Alb.png
+
+newmtl bc1_miharidai
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Miharidai_Alb.png
+	map_Kd sfcbc1_Miharidai_Alb.png
+	map_d sfcbc1_Miharidai_Alb.png
+
+newmtl bc1_Cushion2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Cushion2_Alb.png
+	map_Kd sfcbc1_Cushion2_Alb.png
+	map_d sfcbc1_Cushion2_Alb.png
+
+newmtl bc1_ClothFlag
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_ClothFlag_Alb.png
+	map_Kd sfcbc1_ClothFlag_Alb.png
+	map_d sfcbc1_ClothFlag_Alb.png
+
+newmtl bc1_BlockOutside
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_BlockOutside_Alb.png
+	map_Kd sfcbc1_BlockOutside_Alb.png
+	map_d sfcbc1_BlockOutside_Alb.png
+
+newmtl bc1_HouseWood
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_KinopioHouseDoor_Alb.png
+	map_Kd sfcbc1_KinopioHouseDoor_Alb.png
+	map_d sfcbc1_KinopioHouseDoor_Alb.png
+
+newmtl bc1_KinopioHouse
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_KinopioHouse_Alb.png
+	map_Kd sfcbc1_KinopioHouse_Alb.png
+	map_d sfcbc1_KinopioHouse_Alb.png
+
+newmtl bc1_grass
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_grass_Alb.png
+	map_Kd sfcbc1_grass_Alb.png
+	map_d sfcbc1_grass_Alb.png
+
+newmtl bc1_GrassMediumside
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_grass_Alb.png
+	map_Kd sfcbc1_grass_Alb.png
+	map_d sfcbc1_grass_Alb.png
+
+newmtl bc1_AsphaltOutside
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_Asphalt_Alb.png
+	map_Kd sfcbc1_Asphalt_Alb.png
+	map_d sfcbc1_Asphalt_Alb.png
+
+newmtl bc1_YamaC
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_yama_C_Alb.png
+	map_Kd sfcbc1_yama_C_Alb.png
+	map_d sfcbc1_yama_C_Alb.png
+
+newmtl bc1_YamaB
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_yama_B_Alb.png
+	map_Kd sfcbc1_yama_B_Alb.png
+	map_d sfcbc1_yama_B_Alb.png
+
+newmtl bc1_YamaA
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka sfcbc1_yama_A_Alb.png
+	map_Kd sfcbc1_yama_A_Alb.png
+	map_d sfcbc1_yama_A_Alb.png

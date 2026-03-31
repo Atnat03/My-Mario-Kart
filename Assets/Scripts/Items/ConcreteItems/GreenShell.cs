@@ -11,19 +11,18 @@ public class GreenShell : ItemFactory, IItem
     public float force = 10;
     public GameObject model;
     
-    Vector3 gravity = new Vector3(0, 9.8f, 0);
+    private Vector3 gravity = new Vector3(0, -9.81f, 0);
+    private bool hasBeenThrown = false;
     
-    public void DropItem(Vector3 direction, NetworkObject Thrower = null)
+    public void DropItem(Vector3 direction, NetworkObject Thrower, bool isFront = false)
     {
-        if (Thrower != null && playerThrowId == Thrower.NetworkObjectId)
-            return;
-        
         transform.SetParent(null);
         rb.isKinematic = false;
+        hasBeenThrown = true;
         
-        transform.LookAt(direction);
+        Vector3 horizontalDirection = new Vector3(direction.x, 0, direction.z).normalized;
         
-        rb.AddForce(direction * force, ForceMode.Impulse);
+        rb.linearVelocity = horizontalDirection * force;
         
         Destroy(gameObject, 10f);
     }
@@ -35,27 +34,43 @@ public class GreenShell : ItemFactory, IItem
 
     private void FixedUpdate()
     {
-        if (transform.parent != null) return;
+        if (!hasBeenThrown) return;
 
-        rb.linearVelocity -= gravity;
-        rb.linearVelocity = rb.linearVelocity.normalized * force;
+        rb.AddForce(gravity, ForceMode.Acceleration);
+
+        Vector3 horizontalVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+
+        if (horizontalVelocity.magnitude > 0.01f)
+        {
+            Vector3 constant = horizontalVelocity.normalized * force;
+
+            rb.linearVelocity = new Vector3(
+                constant.x,
+                rb.linearVelocity.y,
+                constant.z
+            );
+        }
     }
     
     public override void OnCollisionEnter(Collision collision)
     {
+        base.OnCollisionEnter(collision);
+
         if (!collision.collider.TryGetComponent<KartController>(out _))
         {
             Vector3 normal = collision.contacts[0].normal;
 
-            Vector3 newDirection = Vector3.Reflect(rb.linearVelocity.normalized, normal);
+            Vector3 velocity = rb.linearVelocity;
 
-            rb.linearVelocity = newDirection * force;
+            Vector3 reflected = Vector3.Reflect(velocity, normal);
+
+            rb.linearVelocity = reflected.normalized * force;
         }
     }
 
     public override void ApplyEffect(KartController controller)
     {
-        Debug.Log("Applying Carapace");
+        Debug.Log("Applying Green Shell");
         controller.TakeBanana(timeStun);
         Destroy(gameObject);
     }

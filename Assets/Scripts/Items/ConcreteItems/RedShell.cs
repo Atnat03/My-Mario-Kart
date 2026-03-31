@@ -18,7 +18,7 @@ public class RedShell : ItemFactory, IItem
     private bool hasHit = false;
     private bool isActive = false;
 
-    public void DropItem(Vector3 direction, NetworkObject Thrower)
+    public void DropItem(Vector3 direction, NetworkObject Thrower, bool isFront = false)
     {
         if (Thrower != null && playerThrowId == Thrower.NetworkObjectId)
             return;
@@ -27,7 +27,7 @@ public class RedShell : ItemFactory, IItem
 
         rb.isKinematic = false;
         transform.parent = null;
-
+        
         direction = new Vector3(direction.x, 0f, direction.z).normalized;
 
         transform.LookAt(transform.position + direction);
@@ -129,6 +129,9 @@ public class RedShell : ItemFactory, IItem
 
         Debug.Log($"Red Shell a touché {controller.name}");
         controller.TakeBanana(timeStun);
+        
+        if(controller.OwnerClientId != playerThrowId)
+            GameManager.instance.AddScore(playerThrowId, _scoreGain);
 
         if (NetworkObject != null && NetworkObject.IsSpawned)
             NetworkObject.Despawn(true);

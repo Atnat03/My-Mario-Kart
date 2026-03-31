@@ -5,17 +5,32 @@ namespace Items.ConcreteItems
 {
     public class Mushroom : ItemFactory, IItem
     {
-        public void DropItem(Vector3 direction, NetworkObject Thrower = null)
+        public void DropItem(Vector3 direction, NetworkObject thrower = null, bool isFront = false)
         {
-            if (Thrower == null) return;
-            
+            if (thrower == null) return;
+
+            ulong playerId = thrower.OwnerClientId;
+
             Debug.Log("Take mushroom");
-            
-            KartController controller = Thrower.GetComponent<KartController>();
-            
-            controller.TakeMushroom();
-            
+
+            EatMushroomClientRpc(playerId);
+
             GetComponent<NetworkObject>().Despawn(true);
         }
+        
+        [Rpc(SendTo.Everyone)]
+        public void EatMushroomClientRpc(ulong playerId)
+        {
+            if (NetworkManager.LocalClientId != playerId) return;
+
+            NetworkObject playerObj = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(playerId);
+
+            if (playerObj == null) return;
+
+            KartController controller = playerObj.GetComponent<KartController>();
+
+            controller.TakeMushroom();
+        }
+        
     }
 }

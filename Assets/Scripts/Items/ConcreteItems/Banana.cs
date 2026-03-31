@@ -8,12 +8,17 @@ public class Banana : ItemFactory, IItem
     public Rigidbody rb;
     public float timeStun;
     public float force = 10;
-    
-    public void DropItem(Vector3 direction, NetworkObject Thrower = null)
+
+    public void DropItem(Vector3 direction, NetworkObject Thrower = null, bool isFront = false)
     {
         rb.isKinematic = false;
         
-        direction += Vector3.up * 0.5f;
+        if(isFront)
+            direction += Vector3.up * 0.5f;
+        else
+        {
+            direction.z *= 0.2f;
+        }
         
         rb.AddForce(direction * force, ForceMode.Impulse);
     }
@@ -24,8 +29,9 @@ public class Banana : ItemFactory, IItem
         
         NetworkObject n = controller.GetComponent<NetworkObject>();
         
-        GameManager.instance.AddScore(playerThrowId, 10);
-
+        if(controller.OwnerClientId != playerThrowId)
+            GameManager.instance.AddScore(playerThrowId, _scoreGain);
+        
         Debug.Log("Applying banana");
 
         controller.TakeBanana(timeStun);
