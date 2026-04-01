@@ -10,8 +10,9 @@ public class RedShell : ItemFactory, IItem
     public GameObject model;
     public float radiusRaycast = 9f;
 
-    private NetworkObject thrower;
+    private ulong throwerId;
     private Transform currentTarget;
+    private bool hasLockedTarget = false;
 
     private float homingActivationTime = 0.5f;
     private float launchTime;
@@ -20,11 +21,11 @@ public class RedShell : ItemFactory, IItem
 
     public void DropItem(Vector3 direction, NetworkObject Thrower, bool isFront = false)
     {
-        if (Thrower != null && playerThrowId == Thrower.NetworkObjectId)
-            return;
+        if (Thrower == null) return;
         
-        this.thrower = Thrower;
-
+        throwerId = Thrower.NetworkObjectId;
+        playerThrowId = throwerId;
+        
         rb.isKinematic = false;
         transform.parent = null;
         
@@ -35,7 +36,7 @@ public class RedShell : ItemFactory, IItem
 
         launchTime = Time.time;
         isActive = true;
-
+        hasLockedTarget = false;
         currentTarget = null;
 
         Destroy(gameObject, 15f);
@@ -51,6 +52,7 @@ public class RedShell : ItemFactory, IItem
     {
         if (!isActive || !IsServer) return;
         if (transform.parent != null) return;
+        if (hasHit) return;
 
         if (Time.time - launchTime < homingActivationTime)
         {
@@ -58,6 +60,42 @@ public class RedShell : ItemFactory, IItem
             return;
         }
 
+        if (!hasLockedTarget || currentTarget == null)
+        {
+            FindNewTarget();
+        }
+
+        Vector3 moveDir;
+
+        if (currentTarget != null)
+        {
+            if (currentTarget.gameObject.activeInHierarchy)
+            {
+                moveDir = (currentTarget.position - transform.position).normalized;
+            }
+            else
+            {
+                hasLockedTarget = false;
+                currentTarget = null;
+                moveDir = transform.forward;
+            }
+        }
+        else
+        {
+            moveDir = transform.forward;
+        }
+
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation, 
+            Quaternion.LookRotation(moveDir), 
+            12f * Time.fixedDeltaTime
+        );
+
+        rb.linearVelocity = moveDir * force;
+    }
+
+    private void FindNewTarget()
+    {
         Collider[] cols = Physics.OverlapSphere(transform.position, radiusRaycast, LayerMask.GetMask("Player"));
 
         Transform bestTarget = null;
@@ -65,38 +103,26 @@ public class RedShell : ItemFactory, IItem
 
         foreach (Collider c in cols)
         {
-            GameObject playerObj = c.gameObject;
-
-            if (thrower != null && playerObj == thrower.gameObject)
+            NetworkObject netObj = c.GetComponent<NetworkObject>();
+            if (netObj == null) continue;
+            
+            if (netObj.NetworkObjectId == throwerId)
                 continue;
 
-            float distSq = (playerObj.transform.position - transform.position).sqrMagnitude;
+            float distSq = (c.transform.position - transform.position).sqrMagnitude;
 
             if (distSq < bestDistance)
             {
                 bestDistance = distSq;
-                bestTarget = playerObj.transform;
+                bestTarget = c.transform;
             }
         }
 
-        currentTarget = bestTarget;
-
-        Vector3 moveDir;
-
-        if (currentTarget != null)
+        if (bestTarget != null)
         {
-            moveDir = (currentTarget.position - transform.position).normalized;
+            currentTarget = bestTarget;
+            hasLockedTarget = true;
         }
-        else
-        {
-            moveDir = transform.forward;
-        }
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, 
-                                              Quaternion.LookRotation(moveDir), 
-                                              12f * Time.fixedDeltaTime);
-
-        rb.linearVelocity = moveDir * force;
     }
 
     public override void OnCollisionEnter(Collision collision)
@@ -105,10 +131,13 @@ public class RedShell : ItemFactory, IItem
 
         if (collision.collider.TryGetComponent<KartController>(out KartController kart))
         {
-            if (thrower != null && collision.collider.GetComponent<NetworkObject>() == thrower)
+            NetworkObject netObj = collision.collider.GetComponent<NetworkObject>();
+            
+            if (netObj != null && netObj.NetworkObjectId == throwerId)
                 return;
 
             hasHit = true;
+            isActive = false;
             ApplyEffect(kart);
             return;
         }
@@ -120,6 +149,10 @@ public class RedShell : ItemFactory, IItem
             
             rb.linearVelocity = newDirection * force;
             transform.rotation = Quaternion.LookRotation(newDirection);
+            
+            launchTime = Time.time;
+            hasLockedTarget = false;
+            currentTarget = null;
         }
     }
 
@@ -143,5 +176,11 @@ public class RedShell : ItemFactory, IItem
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radiusRaycast);
+        
+        if (currentTarget != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(transform.position, currentTarget.position);
+        }
     }
 }

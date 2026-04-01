@@ -9,6 +9,8 @@ public class PlayerHealth : NetworkBehaviour
 {
     public NetworkVariable<int> Health = new NetworkVariable<int>(2);
     [SerializeField] private GameObject[] _balloon;
+
+    [SerializeField] private ParticleSystem _balloonExplose;
     
     [Header("Dead")]
     [SerializeField] private ParticleSystem _deathParticle;
@@ -40,6 +42,7 @@ public class PlayerHealth : NetworkBehaviour
     [ClientRpc]
     void UpdateVisualClientRpc(int index)
     {
+        Instantiate(_balloonExplose, _balloon[index].transform.position, _balloon[index].transform.rotation);
         _balloon[index].SetActive(false);
     }
 
@@ -79,6 +82,6 @@ public class PlayerHealth : NetworkBehaviour
         }
 
         if(IsServer)
-            Health.Value = 2;
+            Health.Value = 3;
     }
 }

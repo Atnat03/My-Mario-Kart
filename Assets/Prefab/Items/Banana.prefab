@@ -78,7 +78,7 @@ MonoBehaviour:
   _scoreGain: 15
   rb: {fileID: 1306856062223318836}
   timeStun: 1.5
-  force: 10
+  force: 20
 --- !u!54 &1306856062223318836
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8360661493892388275}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

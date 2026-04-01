@@ -23,7 +23,7 @@ public class GameManager : NetworkBehaviour
     ScoreManager scoreManager;
     
     public List<KartController> _playerKartList = new List<KartController>();
-
+    
     public NetworkVariable<bool> isStarting = new(false);
 
     public bool isTest = false;

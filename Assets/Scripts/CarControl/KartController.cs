@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
+using TMPro;
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -19,8 +21,9 @@ public class KartController : NetworkBehaviour
     public float CanDrift => Mathf.Abs(_horizontalInput) > 0.3f ? 1 : 0;
     public bool IsDriftPowerFull => _driftPower >= _driftLevel3Price - 10;
     public Rigidbody RB => _rb;
-
     public bool IsStun => isStuning;
+    
+    public string Name { get; private set; }
     
     #endregion
     
@@ -35,6 +38,7 @@ public class KartController : NetworkBehaviour
     [SerializeField] private Transform _kartNormal;
     [SerializeField] private PlayerHealth _playerHealth;
     [SerializeField] private Canvas _canvas;
+    [SerializeField] private TextMeshProUGUI _playerName;
 
     [Header("Settings")]
     [SerializeField] private float _accelForce = 1200f;
@@ -99,18 +103,32 @@ public class KartController : NetworkBehaviour
     
     Camera _camera;
     
+    public NetworkVariable<FixedString32Bytes> PlayerName = new();
+    
     #endregion
 
     #region Fonctions
 
     public override void OnNetworkSpawn()
     {
+        PlayerName.OnValueChanged += OnNameChanged;
+        OnNameChanged("", PlayerName.Value);
+        
         if (IsOwner)
         {
             Camera.main.GetComponent<CameraFollow>().Target = transform;
             _canvas.worldCamera = Camera.main;
             _camera = Camera.main;
+            
+            Destroy(_playerName.gameObject);
+
+            SetPlayerNameServerRpc(PlayerLocalData.Instance.LocalPlayerName);
         }
+    }
+    
+    public override void OnNetworkDespawn()
+    {
+        PlayerName.OnValueChanged -= OnNameChanged;
     }
 
     public void SetTransform(Vector3 position, Quaternion rotation)
@@ -119,6 +137,24 @@ public class KartController : NetworkBehaviour
         transform.rotation = rotation;
     }
 
+    public void InitServerSide(string name)
+    {
+        if (!IsServer) return;
+        PlayerName.Value = name;
+    }
+
+    private void OnNameChanged(FixedString32Bytes oldValue, FixedString32Bytes newValue)
+    {
+        if(_playerName != null)
+            _playerName.text = newValue.ToString();
+    }
+    
+    [ServerRpc]
+    public void SetPlayerNameServerRpc(FixedString32Bytes name)
+    {
+        PlayerName.Value = name;
+    }
+    
     private void Update()
     {
         if (!IsOwner) return;
@@ -222,7 +258,7 @@ public class KartController : NetworkBehaviour
     
     void CheckGround()
     {
-        _grounded = Physics.Raycast(_groundRayPoint.position, -transform.up, _groundRayLength, _groundMask);
+        _grounded = Physics.SphereCast(_groundRayPoint.position, 0.35f, -transform.up, out RaycastHit hit, _groundRayLength + 0.4f, _groundMask);
     }
 
     #endregion
@@ -268,7 +304,8 @@ public class KartController : NetworkBehaviour
             powerGain = Remap(_horizontalInput, -1f, 1f, _driftCounterSteerRange, 1f);
         }
         
-        _driftPower += powerGain * Time.deltaTime * 50f;
+        if(_driftPower < _driftLevel3Price)
+            _driftPower += powerGain * Time.deltaTime * 50f;
         
         UpdateDriftLevel();
     }

@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -10,6 +12,7 @@ public class ScoreManager : NetworkBehaviour
     {
         public ulong playerID;
         public int score;
+        public FixedString32Bytes playerName;
 
         public void AddScore(int s)
         {
@@ -21,6 +24,7 @@ public class ScoreManager : NetworkBehaviour
         {
             serializer.SerializeValue(ref playerID);
             serializer.SerializeValue(ref score);
+            serializer.SerializeValue(ref playerName);
         }
     }
 
@@ -40,13 +44,9 @@ public class ScoreManager : NetworkBehaviour
         {
             NetworkManager.Singleton.OnClientConnectedCallback += AddClient;
 
-            if (playerList.Count == 0)
+            foreach (ulong id in NetworkManager.Singleton.ConnectedClientsIds)
             {
-                playerList.Add(new PlayerData 
-                { 
-                    playerID = NetworkManager.Singleton.LocalClientId, 
-                    score = 0 
-                });
+                AddClient(id);
             }
         }
 
@@ -63,9 +63,30 @@ public class ScoreManager : NetworkBehaviour
     private void AddClient(ulong id)
     {
         if (!IsServer) return;
-        if (playerList.Exists(p => p.playerID == id)) return;
 
-        playerList.Add(new PlayerData { playerID = id, score = 0 });
+        StartCoroutine(AddClientWhenReady(id));
+    }
+    
+    private IEnumerator AddClientWhenReady(ulong id)
+    {
+        if (!NetworkManager.Singleton.ConnectedClients.TryGetValue(id, out NetworkClient clientData))
+            yield break;
+        
+        while (clientData.PlayerObject == null)
+            yield return null;
+
+        KartController kart = clientData.PlayerObject.GetComponent<KartController>();
+
+        if (playerList.Exists(p => p.playerID == id))
+            yield break;
+
+        playerList.Add(new PlayerData
+        {
+            playerID = id,
+            score = 0,
+            playerName = kart.PlayerName.Value
+        });
+
         SyncAndUpdateUI();
     }
 
@@ -130,7 +151,12 @@ public class ScoreManager : NetworkBehaviour
             ScoreUIElement scoreUI = uiElement.GetComponent<ScoreUIElement>();
             if (scoreUI != null)
             {
-                scoreUI.UpdateScore(data.playerID, data.score, i + 1);
+                scoreUI.UpdateScore(data.playerName.ToString(), data.score, i);
+
+                if (NetworkManager.LocalClientId == data.playerID)
+                {
+                    scoreUI.UpdateLocalScore();
+                }
             }
 
             uiElement.SetActive(true);

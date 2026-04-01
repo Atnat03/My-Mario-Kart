@@ -5,183 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fe40b73-32ee-4eb8-8150-4b4e6d4c0cdd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AutoJoin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AutoJoin.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CameraEffects.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CameraEffects.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Workshop Reseau/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Workshop Reseau/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/ItemBox_color.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/ItemBox_color.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/ItemBox_light.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/ItemBox_light.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/ItemBox_simbol.shadergraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/ItemBox_simbol.shadergraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/M_ItemBox_color.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/M_ItemBox_color.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/M_ItemBox_light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/M_ItemBox_light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/M_ItemBox_simbol.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/M_ItemBox_simbol.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/Materials/Yc2ZE.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/Materials/Yc2ZE.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/TextureBlackBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/TextureBlackBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/TextureColorBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/TextureColorBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/Texture___Box.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/ItemBox/Texture___Box.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Banana.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Banana/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Banana/source/Banana Peel.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Banana/source/Banana Peel.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Banana/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Banana/textures/internal_ground_ao_texture.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Banana/textures/internal_ground_ao_texture.jpeg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/Bake_ItemKinoko_g00_b00_f00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/Bake_ItemKinoko_g00_b00_f00.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko.dae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko.dae.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko.smd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko.smd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko_Alb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko_Alb.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko_Nrm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko_Nrm.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko_Spm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/ItemKinoko_Spm.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/Materials/ItemKinoko_Alb.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Mushroom/Materials/ItemKinoko_Alb.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/Materials/Shell_AO.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/Materials/Shell_AO.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/Materials/Shell_albedo Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/Materials/Shell_albedo Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/Materials/Shell_albedo Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/Materials/Shell_albedo Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/model.dae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/model.dae.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_AO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_AO.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_albedo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_albedo.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_metallic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_metallic.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_roughness.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/model/textures/Shell_roughness.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_AO.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_AO.jpeg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_albedo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_albedo.jpeg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_albedo_Green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_albedo_Green.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_metallic.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_metallic.jpeg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_roughness.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Items/Shell/textures/Shell_roughness.jpeg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/7331.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/7331.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/Kart.physicMaterial" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/Kart.physicMaterial.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/Materials/7332.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/Materials/7332.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/F2_Item_Kart_Mario_S.dae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/F2_Item_Kart_Mario_S.dae.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/F2_Item_Kart_Mario_Body_S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/F2_Item_Kart_Mario_Body_S.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/F2_Item_Kart_Mario_Kart_S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/F2_Item_Kart_Mario_Kart_S.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/F2_Item_Kart_Mario_Tire_S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/F2_Item_Kart_Mario_Tire_S.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/KartDefault.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/KartDefault.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/KartFirst.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/KartFirst.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/KartMutant.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/KartMutant.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/MarioDefault.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/MarioDefault.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/MarioFirst.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/MarioFirst.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/MarioMutant.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/MarioMutant.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/Roues.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/source/3DS - Nintendogs Cats - Mario Kart/Mario Kart/Tex/Roues.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/textures/F2_Item_Kart_Mario_Body_S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/textures/F2_Item_Kart_Mario_Body_S.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/textures/F2_Item_Kart_Mario_Kart_S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/textures/F2_Item_Kart_Mario_Kart_S.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/textures/F2_Item_Kart_Mario_Tire_S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MarioKart/textures/F2_Item_Kart_Mario_Tire_S.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MushRoom.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/MushRoom.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Particles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Particles/Embers.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Particles/Embers.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Particles/ExplosionDistortion.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Particles/ExplosionDistortion.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Particles/shockwave.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AssetsImportMickael/Particles/shockwave.tif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetStore/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Liquids/CFXR2 Blood Shape Splash.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetStore/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Liquids/CFXR2 Blood Shape Splash.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AssetsImport/MarioKart/Kart.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AssetsImport/MarioKart/Kart.physicMaterial" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DefaultNetworkPrefabs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultNetworkPrefabs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyStarterAsset/Materials/BasicMaterial/Blue Drak.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MyStarterAsset/Materials/BasicMaterial/Blue Drak.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Banana.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Banana.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GreenShell.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GreenShell.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Kart.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Kart.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Mushroom.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Mushroom.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/MysteryCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/MysteryCube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/RedShell.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/RedShell.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MyStarterAsset/UtilsScripts/AlwaysInFrontOnCam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MyStarterAsset/UtilsScripts/AlwaysInFrontOnCam.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Items/Banana.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Items/Banana.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Items/RedShell.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Items/RedShell.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/UI/ScorePlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/UI/ScorePlayer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Karting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Karting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarControl/KartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarControl/KartController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ConcreteItems/Banana.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ConcreteItems/Banana.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ConcreteItems/GreenShell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ConcreteItems/GreenShell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ConcreteItems/Mushroom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ConcreteItems/Mushroom.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/ConcreteItems/RedShell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/ConcreteItems/RedShell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/MysteryCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/MysteryCube.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LobbyManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerHealth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TimerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PlayMode/NewPlayModeScenario.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PlayMode/NewPlayModeScenario.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Banana.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Banana.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/GreenSheel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/GreenSheel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Mushroom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Mushroom.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/RedShell.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/RedShell.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreUIElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreUIElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,16 +39,22 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Accelerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ElementLobbyList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LobbyManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LobbyUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TimerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpdateModelPerso.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@60c1d83693e8/Runtime/Connection/NetworkConnectionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@60c1d83693e8/Runtime/Core/NetworkBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@60c1d83693e8/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@60c1d83693e8/Runtime/SceneManagement/NetworkSceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@1e87cf1dccb8/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.multiplayer@8d17beeef99f/Runtime/Lobbies/Http/ResponseHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.multiplayer@8d17beeef99f/Runtime/Lobbies/Models/Lobby.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.multiplayer@8d17beeef99f/Runtime/Lobbies/Models/Player.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -212,19 +64,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.6f1\Editor\Unity.exe" />
@@ -288,6 +141,7 @@
       <workItem from="1774862553454" duration="8976000" />
       <workItem from="1774873919137" duration="16290000" />
       <workItem from="1774944346418" duration="35401000" />
+      <workItem from="1775028387035" duration="29826000" />
     </task>
     <servers />
   </component>

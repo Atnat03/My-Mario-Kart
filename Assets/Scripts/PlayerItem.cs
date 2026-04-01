@@ -98,7 +98,7 @@ public class PlayerItem : NetworkBehaviour
         
         int i = Random.Range(0, dataItem.itemList.Count);
         
-        PickUpNewItemServerRpc(i);
+        PickUpNewItemServerRpc(1);
     }
     
     [Rpc(SendTo.Server)]

@@ -1,16 +1,27 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreUIElement : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI playerIdText;
     [SerializeField] private TextMeshProUGUI playerScoreText;
-    [SerializeField] private TextMeshProUGUI playerRankText;
+    [SerializeField] private Image playerRankImage;
+    
+    [SerializeField] private Image background;
+    [SerializeField] private Color isLocalColor;
+    
+    [SerializeField] private Sprite[] rankSprites;
 
-    public void UpdateScore(ulong id, int score, int rank)
+    public void UpdateScore(string nom, int score, int rank)
     {
-        playerIdText.text = id.ToString();
+        playerIdText.text = nom;
         playerScoreText.text = score.ToString();
-        playerRankText.text = rank.ToString();
+        playerRankImage.sprite = rankSprites[rank];
+    }
+
+    public void UpdateLocalScore()
+    {
+        background.color = isLocalColor;
     }
 }
