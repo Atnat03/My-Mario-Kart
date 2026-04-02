@@ -1,0 +1,24 @@
+# Blender MTL File: 'Import Scene.blend'
+# Material Count: 2
+
+newmtl m_Color
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni -1.000000
+d 0.000000
+illum 1
+map_Kd KinokoColor_Alb.1.png
+map_d KinokoColor_Alb.1.png
+
+newmtl m_Metal
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni -1.000000
+d 0.000000
+illum 1
+map_Kd KinokoMetal_Alb.1.png
+map_d KinokoMetal_Alb.1.png

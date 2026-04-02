@@ -195,7 +195,7 @@ public class LobbyManager : MonoBehaviour
                         localData = dataHolder.AddComponent<PlayerLocalData>();
                     }
 
-                    localData.SetPlayerData(mySkin, myName);
+                    localData.SetPlayerData(mySkin, myName, joinedLobby.Players.Count);
 
                     Debug.Log($"[CLIENT] Saved local data before joining relay: Skin={mySkin}, Name={myName}");
 
@@ -564,7 +564,7 @@ public async void StartGame()
             }
 
             PlayerLocalData localData = PlayerLocalData.Instance;
-            localData.SetPlayerData(mySkin, myName);
+            localData.SetPlayerData(mySkin, myName, joinedLobby.Players.Count);
 
             string relayCode = await RelayManager.instance.CreateRelay();
             

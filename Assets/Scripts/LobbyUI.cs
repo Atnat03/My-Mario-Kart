@@ -82,6 +82,19 @@ public class LobbyUI : MonoBehaviour
 		CloseLobbyCreation();
 	}
 
+	public void LeaveLobby()
+	{
+		IsLobbyCanva = false;
+		
+		_selectionPerso.SetActive(false);
+		
+		_createLobbyCanva.SetActive(true);
+		_lobbyCanva.SetActive(false);
+		_startingScreen.SetActive(false);
+
+		CloseLobbyCreation();
+	}
+
 	#region LobbyMenu
 
 	public void OpenLobbyCreation() => _creationLobbyUI.gameObject.SetActive(true);

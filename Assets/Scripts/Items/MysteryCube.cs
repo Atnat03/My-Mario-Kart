@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using MyPrint;
+using ScriptableObjectsDefinitions;
 using Unity.Netcode;
 using UnityEngine;
 using Console = MyPrint.Console;
@@ -12,9 +13,13 @@ public class MysteryCube : NetworkBehaviour
     [SerializeField] private Collider _collider;
     
     [SerializeField] private Vector2 timeBeforeRespawn;
+    [SerializeField] private GameObject _destroyParticle;
+
+    [Header("Sound")] 
+    [SerializeField] private SoundsDataSO _soundData;
+    [SerializeField] private AudioSource _audioSource;
     
-    [Header("DEBUG")]
-    [SerializeField] private float elapsedTimeRespawn;
+    private float elapsedTimeRespawn;
     private bool hasCube = true;
     
     private void Update()
@@ -45,6 +50,8 @@ public class MysteryCube : NetworkBehaviour
         float duration = 1f;
         float elapsed = 0;
         
+        SoundManager.PlaySound(_soundData, "Appear", _audioSource);
+        
         _model.transform.localScale = Vector3.zero;
         _model.SetActive(true);
 
@@ -59,8 +66,6 @@ public class MysteryCube : NetworkBehaviour
         
         _model.transform.localScale = Vector3.one;
         
-        Console.Print("Spawn Cube", ColorConsole.Pink);
-        
         hasCube = true;
         _collider.enabled = true;
     }
@@ -69,6 +74,10 @@ public class MysteryCube : NetworkBehaviour
     private void DestroyCubeRpc()
     {
         Console.Print("Pick up Cube", ColorConsole.Pink);
+        
+        SoundManager.PlaySound(_soundData, "Destroy", _audioSource);
+        
+        Instantiate(_destroyParticle, transform.position, Quaternion.identity);
         
         hasCube = false;
         _model.SetActive(false);

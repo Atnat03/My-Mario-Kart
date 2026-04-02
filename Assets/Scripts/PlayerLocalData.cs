@@ -6,6 +6,8 @@ public class PlayerLocalData : MonoBehaviour
 
     public int LocalPlayerSkinId { get; private set; } = 0;
     public string LocalPlayerName { get; private set; } = "";
+    
+    public int ExpectedPlayerCount { get; private set; } = 1;
 
     private void Awake()
     {
@@ -21,10 +23,11 @@ public class PlayerLocalData : MonoBehaviour
         Debug.Log("PlayerLocalData created and persisted");
     }
 
-    public void SetPlayerData(int skinId, string playerName)
+    public void SetPlayerData(int skinId, string playerName, int expectedPlayerCount)
     {
         LocalPlayerSkinId = skinId;
         LocalPlayerName = playerName;
+        ExpectedPlayerCount = expectedPlayerCount;
         
         Debug.Log($"PlayerLocalData saved: Skin={skinId}, Name={playerName}");
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Items;
 using MyPrint;
@@ -27,6 +28,10 @@ public class PlayerItem : NetworkBehaviour
     [SerializeField] private Image itemIcon;
     [SerializeField] private Sprite[] iconSpriteList;
 
+    //Actions
+    public Action OnRollItem;
+    public Action OnDropItem;
+    
     public override void OnNetworkSpawn()
     {
         if(IsOwner)
@@ -82,6 +87,8 @@ public class PlayerItem : NetworkBehaviour
     {
         if (visualInstance != null)
         {
+            OnDropItem?.Invoke();
+            
             Destroy(visualInstance);
             visualInstance = null;
         }
@@ -98,7 +105,7 @@ public class PlayerItem : NetworkBehaviour
         
         int i = Random.Range(0, dataItem.itemList.Count);
         
-        PickUpNewItemServerRpc(1);
+        PickUpNewItemServerRpc(i);
     }
     
     [Rpc(SendTo.Server)]
@@ -115,8 +122,12 @@ public class PlayerItem : NetworkBehaviour
 
     IEnumerator GetNewItemCoroutine(int finalIndex)
     {
+        haveAnItem = true;
+        
         if (IsOwner)
         {
+            OnRollItem?.Invoke();
+            
             itemUI.SetActive(true);
             itemUI.transform.localScale = Vector3.zero;
 
@@ -129,7 +140,7 @@ public class PlayerItem : NetworkBehaviour
                 yield return null;
             }
             
-            int[] indexList = new int[10];
+            int[] indexList = new int[15];
             int maxIndex = 4;
 
             for (int i = 0; i < indexList.Length; i++)
@@ -139,7 +150,7 @@ public class PlayerItem : NetworkBehaviour
             
             indexList[^1] = finalIndex;
 
-            float finalIntervalTime = 0.25f;
+            float finalIntervalTime = 0.2f;
             
             for(int i = 0 ; i < indexList.Length ; i++)
             {
@@ -149,10 +160,9 @@ public class PlayerItem : NetworkBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(0.25f + (10 * 0.25f));
+            yield return new WaitForSeconds(0.25f + (15 * 0.2f));
         }
         
-        haveAnItem = true;
         itemId = finalIndex;
         
         SpawnVisual(finalIndex);

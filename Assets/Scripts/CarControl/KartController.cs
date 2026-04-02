@@ -87,9 +87,12 @@ public class KartController : NetworkBehaviour
     [SerializeField] private ParticleSystem[] _miniTurboParticles;
     [SerializeField] private GameObject[] _sandParticle;
     
-    public Action<float> OnDriftBoost;
+    public Action OnBoost;
     public Action OnDriftStart;
     public Action OnDriftEnd;
+    public Action OnStunning;
+
+    public Action<float> OnMove;
     
     private float _horizontalInput;
     private float _verticalInput;
@@ -104,6 +107,7 @@ public class KartController : NetworkBehaviour
     Camera _camera;
     
     public NetworkVariable<FixedString32Bytes> PlayerName = new();
+    public NetworkVariable<int> SkinID = new(0);
     
     #endregion
 
@@ -137,10 +141,11 @@ public class KartController : NetworkBehaviour
         transform.rotation = rotation;
     }
 
-    public void InitServerSide(string name)
+    public void InitServerSide(string name, int skinId)
     {
         if (!IsServer) return;
         PlayerName.Value = name;
+        SkinID.Value = skinId;
     }
 
     private void OnNameChanged(FixedString32Bytes oldValue, FixedString32Bytes newValue)
@@ -221,6 +226,8 @@ public class KartController : NetworkBehaviour
         {
             _rb.linearDamping = 0.1f;
         }
+        
+        OnMove?.Invoke(_rb.linearVelocity.magnitude);
         
         _rb.AddForce(Vector3.down * _gravityForce, ForceMode.Acceleration);
     }
@@ -376,7 +383,6 @@ public class KartController : NetworkBehaviour
         {
             float boostForce = GetDriftBoostForce(_currentDriftLevel);
             StartCoroutine(DriftBoostCoroutine(boostForce, _currentDriftLevel));
-            OnDriftBoost?.Invoke(_driftPower);
         }
 
         foreach (ParticleSystem p in _driftParticles) 
@@ -407,6 +413,8 @@ public class KartController : NetworkBehaviour
     {
         if(_camera.TryGetComponent(out CameraEffects effet))
             effet.BoostFOV();
+        
+        OnBoost?.Invoke();
         
         _rb.AddForce(transform.forward * boostForce, ForceMode.Impulse);
         
@@ -546,6 +554,8 @@ public class KartController : NetworkBehaviour
     IEnumerator StunningBanana(float time)
     {
         isStuning = true;
+        
+        OnStunning?.Invoke();
 
         float elapsed = 0f;
 

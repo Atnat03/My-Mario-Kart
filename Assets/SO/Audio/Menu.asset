@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb4883955c1d8849a76a62d8df3b6b0, type: 3}
+  m_Name: Menu
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectsDefinitions.SoundsDataSO
+  sounds:
+  - soundName: Start
+    audioClip: {fileID: 8300000, guid: fddb475fd380b1a44bdd0d1fda7668b8, type: 3}
+    volume: 0.5
+  - soundName: PARAMETRES
+    audioClip: {fileID: 8300000, guid: 53e33d52a71f0cf459d2ed3c394af5f1, type: 3}
+    volume: 0.25

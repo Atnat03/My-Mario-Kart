@@ -1,7 +1,5 @@
 using System;
-using TreeEditor;
 using UnityEngine;
-using UnityEngine.InputSystem.Android;
 
 public class Checkpoint : MonoBehaviour
 {

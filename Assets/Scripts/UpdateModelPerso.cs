@@ -15,7 +15,6 @@ public class UpdateModelPerso : MonoBehaviour
 
 	#endregion
 
-
 	#region Fonctions
 
 	private void OnEnable()
@@ -42,7 +41,7 @@ public class UpdateModelPerso : MonoBehaviour
 	public void PlaySelectAnimation()
 	{
 		if(_modelList[currentId] != null)
-			_modelList[currentId].SetBool("Ready", true);
+			_modelList[currentId].SetTrigger("Ready");
 	}
 	
 	#endregion

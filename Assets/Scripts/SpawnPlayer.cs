@@ -8,22 +8,25 @@ public class SpawnPlayer : NetworkBehaviour
     [SerializeField] private GameObject[] playerPrefabList;
     [SerializeField] private Transform[] spawnPos;
 
-    // Stocke les données de chaque client
     private Dictionary<ulong, PlayerData> clientPlayerData = new();
 
+    private bool gameStarted = false;
+    
+    private int expectedPlayers;
+    
     private struct PlayerData
     {
         public int skinId;
         public string playerName;
+        public bool isReady;
     }
 
     public override void OnNetworkSpawn()
     {
         if (IsServer)
         {
-            NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
-
-            // L'host envoie ses données directement
+            expectedPlayers = PlayerLocalData.Instance.ExpectedPlayerCount;
+            
             if (IsHost)
             {
                 int mySkin = PlayerLocalData.Instance.LocalPlayerSkinId;
@@ -35,14 +38,16 @@ public class SpawnPlayer : NetworkBehaviour
                 clientPlayerData[NetworkManager.Singleton.LocalClientId] = new PlayerData
                 {
                     skinId = mySkin,
-                    playerName = myName
+                    playerName = myName,
+                    isReady = true
                 };
 
                 SpawnPlayerForClient(NetworkManager.Singleton.LocalClientId, mySkin, myName);
+                
+                CheckAllPlayersReady();
             }
         }
 
-        // Les clients (host inclus) envoient leurs données au serveur
         if (IsClient && !IsHost)
         {
             int mySkin = PlayerLocalData.Instance.LocalPlayerSkinId;
@@ -55,42 +60,31 @@ public class SpawnPlayer : NetworkBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        if (NetworkManager.Singleton != null && IsServer)
-        {
-            NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
-        }
-    }
-
-    private void OnClientConnected(ulong clientId)
-    {
-        Debug.Log($"Client {clientId} connected, waiting for player data...");
-    }
 
     [ServerRpc(RequireOwnership = false)]
     private void SendPlayerDataToServerRpc(int skinId, string playerName, ServerRpcParams rpcParams = default)
     {
         ulong clientId = rpcParams.Receive.SenderClientId;
-
-        Console.Print($"Received data from Client {clientId}: Skin={skinId}, Name={playerName}", ColorConsole.Blue);
-
+        
         clientPlayerData[clientId] = new PlayerData
         {
             skinId = skinId,
-            playerName = playerName
+            playerName = playerName,
+            isReady = true
         };
-
+        
         SpawnPlayerForClient(clientId, skinId, playerName);
+        
+        CheckAllPlayersReady();
     }
 
     private void SpawnPlayerForClient(ulong clientId, int skinId, string playerName)
     {
-        Transform pos = GetSpawnPos();
-
+        int index = (int)clientId % spawnPos.Length;
+        Transform pos = spawnPos[index % spawnPos.Length];
+        
         if (skinId < 0 || skinId >= playerPrefabList.Length)
         {
-            Debug.LogWarning($"Invalid skinId {skinId} for client {clientId}, using skin 0");
             skinId = 0;
         }
 
@@ -100,11 +94,41 @@ public class SpawnPlayer : NetworkBehaviour
         NetworkObject networkObject = player.GetComponent<NetworkObject>();
         networkObject.SpawnAsPlayerObject(clientId, true);
         
-        var kart = networkObject.GetComponent<KartController>();
-        kart.InitServerSide(playerName);
-        
-        Debug.Log($"Spawned player for client {clientId} - Skin: {skinId}, Name: {playerName}");
+        KartController kart = networkObject.GetComponent<KartController>();
+        kart.InitServerSide(playerName, skinId);
     }
     
     public Transform GetSpawnPos() => spawnPos[Random.Range(0, spawnPos.Length)];
+    
+    private void CheckAllPlayersReady()
+    {
+        if (gameStarted) return;
+
+        int totalClients = NetworkManager.Singleton.ConnectedClientsList.Count;
+
+        if (totalClients < expectedPlayers)
+        {
+            Debug.Log($"Waiting players {totalClients}/{expectedPlayers}");
+            return;
+        }
+
+        if (clientPlayerData.Count < expectedPlayers)
+            return;
+
+        foreach (PlayerData player in clientPlayerData.Values)
+        {
+            if (!player.isReady)
+                return;
+        }
+
+        gameStarted = true;
+
+        Debug.Log("Tous les joueurs sont prêts !");
+        OnAllPlayersReady();
+    }
+    
+    private void OnAllPlayersReady()
+    {
+        GameManager.instance.StartGameFromLobby();
+    }
 }

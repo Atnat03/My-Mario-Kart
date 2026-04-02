@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb4883955c1d8849a76a62d8df3b6b0, type: 3}
+  m_Name: SelectPerso
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectsDefinitions.SoundsDataSO
+  sounds:
+  - soundName: Mario
+    audioClip: {fileID: 8300000, guid: cacf3be63e212cf4ba2a1e4c6dd5ef5f, type: 3}
+    volume: 0.5
+  - soundName: Luigi
+    audioClip: {fileID: 8300000, guid: af14dbb117ac265448c1cbde087ba282, type: 3}
+    volume: 0.5
+  - soundName: Peach
+    audioClip: {fileID: 8300000, guid: 7c6498b2ee7c3b443b310ef1d5fc5481, type: 3}
+    volume: 0.5
+  - soundName: Toad
+    audioClip: {fileID: 8300000, guid: 8f5149b34a9262f48b2ec6173972bb51, type: 3}
+    volume: 0.5
+  - soundName: Yoshi
+    audioClip: {fileID: 8300000, guid: 4edfc73786130aa429ea3f89150ba6a5, type: 3}
+    volume: 0.5
+  - soundName: Bowser
+    audioClip: {fileID: 8300000, guid: e0eb2fac9daeb614b83baa2c2207f611, type: 3}
+    volume: 0.5
