@@ -11,15 +11,19 @@ public class Banana : ItemFactory, IItem
 
     public void DropItem(Vector3 direction, NetworkObject Thrower = null, bool isFront = false)
     {
+        DropItemRpc(direction, isFront);
+    }
+
+    [Rpc(SendTo.Everyone)]
+    private void DropItemRpc(Vector3 direction, bool isFront)
+    {
         rb.isKinematic = false;
-        
-        if(isFront)
+    
+        if (isFront)
             direction += Vector3.up * 0.5f;
         else
-        {
             direction.z *= 0.2f;
-        }
-        
+    
         rb.AddForce(direction * force, ForceMode.Impulse);
     }
 

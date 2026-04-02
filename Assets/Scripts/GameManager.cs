@@ -93,6 +93,10 @@ public class GameManager : NetworkBehaviour
         gameStarting = true;
 
         isStarting.Value = false;
+        
+        if(isTest)
+            StartTheGameplay();
+        
         StartCoroutine(CinematiqueWait());
     }
 

@@ -93,7 +93,8 @@ public class MysteryCube : NetworkBehaviour
 
         if (other.TryGetComponent(out PlayerItem player))
         {
-            player.PickUpNewItem();
+            int itemIndex = Random.Range(0, player.dataItem.itemList.Count);
+            player.GiveItemServerSide(itemIndex);
             DestroyCubeRpc();
         }
     }

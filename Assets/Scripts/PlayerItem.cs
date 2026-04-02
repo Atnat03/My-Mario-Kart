@@ -28,13 +28,26 @@ public class PlayerItem : NetworkBehaviour
     [SerializeField] private Image itemIcon;
     [SerializeField] private Sprite[] iconSpriteList;
 
+    // NetworkVariables pour synchroniser l'état
+    public NetworkVariable<int> currentItemId = new NetworkVariable<int>(
+        -1,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
+    public NetworkVariable<bool> hasItem = new NetworkVariable<bool>(
+        false,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
     //Actions
     public Action OnRollItem;
     public Action OnDropItem;
     
     public override void OnNetworkSpawn()
     {
-        if(IsOwner)
+        if (IsOwner)
         {
             gameObject.name += " " + NetworkManager.LocalClientId;
             itemUI.SetActive(false);
@@ -50,12 +63,10 @@ public class PlayerItem : NetworkBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.LeftControl))
                 DropItemServerRpc(transform.forward, itemPosFront.position, itemPosFront.rotation, true);
             else
-            {
                 DropItemServerRpc(-transform.forward, itemPos.position, itemPos.rotation, false);
-            }
         }
     }
 
@@ -72,12 +83,11 @@ public class PlayerItem : NetworkBehaviour
         {
             currentItem.GetComponent<IItem>().DropItem(direction, GetComponent<NetworkObject>(), isFront);
             currentItem.GetComponent<ItemFactory>().SetPlayerThrowId(OwnerClientId);
-            
             currentItem = null;
         }
 
-        haveAnItem = false;
-        itemId = -1;
+        hasItem.Value = false;
+        currentItemId.Value = -1;
 
         DropItemClientRpc();
     }
@@ -85,34 +95,28 @@ public class PlayerItem : NetworkBehaviour
     [Rpc(SendTo.Everyone)]
     private void DropItemClientRpc()
     {
+        StopAllCoroutines();
+
+        OnDropItem?.Invoke();
+
         if (visualInstance != null)
         {
-            OnDropItem?.Invoke();
-            
             Destroy(visualInstance);
             visualInstance = null;
         }
-        
+
+        haveAnItem = false;
+        itemId = -1;
+
         if (IsOwner)
         {
             StartCoroutine(DropItemUI());
         }
     }
 
-    public void PickUpNewItem()
-    {
-        if (haveAnItem) return;
-        
-        int i = Random.Range(0, dataItem.itemList.Count);
-        
-        PickUpNewItemServerRpc(i);
-    }
     
-    [Rpc(SendTo.Server)]
-    void PickUpNewItemServerRpc(int itemIndex)
-    {
-        PickUpNewItemClientRpc(itemIndex);
-    }
+
+    
     
     [Rpc(SendTo.Everyone)]
     void PickUpNewItemClientRpc(int itemIndex)
@@ -152,7 +156,7 @@ public class PlayerItem : NetworkBehaviour
 
             float finalIntervalTime = 0.2f;
             
-            for(int i = 0 ; i < indexList.Length ; i++)
+            for (int i = 0; i < indexList.Length; i++)
             {
                 itemIcon.sprite = iconSpriteList[indexList[i]];
                 yield return new WaitForSeconds(finalIntervalTime);
@@ -163,9 +167,22 @@ public class PlayerItem : NetworkBehaviour
             yield return new WaitForSeconds(0.25f + (15 * 0.2f));
         }
         
-        itemId = finalIndex;
-        
-        SpawnVisual(finalIndex);
+        if (haveAnItem)
+        {
+            itemId = finalIndex;
+            SpawnVisual(finalIndex);
+        }
+    }
+    
+    public void GiveItemServerSide(int itemIndex)
+    {
+        if (!IsServer) return;
+        if (haveAnItem) return;
+
+        hasItem.Value = true;
+        currentItemId.Value = itemIndex;
+
+        PickUpNewItemClientRpc(itemIndex);
     }
 
     IEnumerator DropItemUI()
