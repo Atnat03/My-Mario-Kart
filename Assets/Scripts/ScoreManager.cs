@@ -254,4 +254,19 @@ public class ScoreManager : NetworkBehaviour
             UpdateUI();
         }
     }
+
+    public Transform GetFirstPlayer()
+    {
+        if (playerList.Count == 0)
+            return null;
+
+        PlayerDataScore bestPlayer = GetSortedList()[0];
+
+        if (NetworkManager.Singleton.ConnectedClients.TryGetValue(bestPlayer.playerID, out var client))
+        {
+            return client.PlayerObject.transform;
+        }
+
+        return null;
+    }
 }

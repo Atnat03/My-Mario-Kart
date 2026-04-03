@@ -100,4 +100,11 @@ public class PlayerHealth : NetworkBehaviour
         if(IsServer)
             Health.Value = 3;
     }
+    
+    public void UpdateBalloon()
+    {
+        _balloon[0].SetActive(false);
+        _balloon[1].SetActive(false);
+        _balloon[2].SetActive(false);
+    }
 }

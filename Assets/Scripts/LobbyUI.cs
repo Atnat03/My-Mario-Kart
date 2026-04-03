@@ -24,7 +24,6 @@ public class LobbyUI : MonoBehaviour
 	
 	#endregion
 
-
 	#region Variables
 
 	[SerializeField] private LobbyManager _lobby;

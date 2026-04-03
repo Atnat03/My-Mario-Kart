@@ -12,6 +12,8 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerItem : NetworkBehaviour
 {
+    public bool IsFront { get => _isFront; set => _isFront = value; }
+    
     public ItemSO dataItem;
     
     public Transform itemPos;
@@ -28,18 +30,10 @@ public class PlayerItem : NetworkBehaviour
     [SerializeField] private Image itemIcon;
     [SerializeField] private Sprite[] iconSpriteList;
 
-    // NetworkVariables pour synchroniser l'état
-    public NetworkVariable<int> currentItemId = new NetworkVariable<int>(
-        -1,
-        NetworkVariableReadPermission.Everyone,
-        NetworkVariableWritePermission.Server
-    );
+    public NetworkVariable<int> currentItemId = new(-1);
+    public NetworkVariable<bool> hasItem = new();
 
-    public NetworkVariable<bool> hasItem = new NetworkVariable<bool>(
-        false,
-        NetworkVariableReadPermission.Everyone,
-        NetworkVariableWritePermission.Server
-    );
+    private bool _isFront = false;
 
     //Actions
     public Action OnRollItem;
@@ -53,21 +47,28 @@ public class PlayerItem : NetworkBehaviour
             itemUI.SetActive(false);
         }
     }
-    
+
     public void Update()
+    {
+        _isFront = Input.GetKey(KeyCode.LeftControl);
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DropItem();
+        }
+    }
+
+    public void DropItem()
     {
         if (!IsOwner) return;
         
         if (!GameManager.instance.isStarting.Value)
             return;
         
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Input.GetKey(KeyCode.LeftControl))
-                DropItemServerRpc(transform.forward, itemPosFront.position, itemPosFront.rotation, true);
-            else
-                DropItemServerRpc(-transform.forward, itemPos.position, itemPos.rotation, false);
-        }
+        if (_isFront)
+            DropItemServerRpc(transform.forward, itemPosFront.position, itemPosFront.rotation, true);
+        else
+            DropItemServerRpc(-transform.forward, itemPos.position, itemPos.rotation, false);
     }
 
     [Rpc(SendTo.Server)]
@@ -113,9 +114,6 @@ public class PlayerItem : NetworkBehaviour
             StartCoroutine(DropItemUI());
         }
     }
-
-    
-
     
     
     [Rpc(SendTo.Everyone)]

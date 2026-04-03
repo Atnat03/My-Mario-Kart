@@ -168,12 +168,12 @@ public class KartController : NetworkBehaviour
             return;
         
         if (isStuning) return;
-        
-       _horizontalInput = Input.GetAxis("Horizontal"); 
-       _verticalInput = Input.GetAxis("Vertical");
 
+       _horizontalInput = Input.GetAxisRaw("Horizontal");
+       _verticalInput = Input.GetAxisRaw("Vertical");
+       
        _canDrift = Input.GetKey(KeyCode.LeftShift);
-        
+       
         if (_canDrift && !_isDrifting && _grounded)
         {
             StartDrift();

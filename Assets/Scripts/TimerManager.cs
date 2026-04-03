@@ -10,8 +10,7 @@ public class TimerManager : NetworkBehaviour
 	#region Properties
 
 	#endregion
-
-
+	
 	#region Variables
 
 	[Header("Setting Party")]
@@ -61,7 +60,6 @@ public class TimerManager : NetworkBehaviour
 		if(isRunningGame.Value)
 			currentTime.Value -= Time.deltaTime;
 	}
-
 	
 	private void OnTimerChanged(float previousValue, float newValue)
 	{
@@ -76,7 +74,6 @@ public class TimerManager : NetworkBehaviour
 		int minutes = ((int) newValue / 60);
 		_timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 	}
-	
 	
 	public void EndGame()
 	{

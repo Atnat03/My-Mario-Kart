@@ -1,0 +1,1512 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 19.03.2022 16:08:18
+
+newmtl wire_255255000
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 1.0000 1.0000 0.0000
+	Kd 1.0000 1.0000 0.0000
+	Ks 0.3500 0.3500 0.3500
+
+newmtl LM_wk_deco4_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco4_Alb.png
+	map_Kd LM_wk_deco4_Alb.png
+	map_d LM_wk_deco4_Alb.png
+
+newmtl LM_se_Statue_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_se_Statue_Alb.png
+	map_Kd LM_se_Statue_Alb.png
+	map_d LM_se_Statue_Alb.png
+
+newmtl LM_ok_Chandelier_L_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ok_Chandelier_L_Alb.png
+	map_Kd LM_ok_Chandelier_L_Alb.png
+	map_d LM_ok_Chandelier_L_Alb.png
+
+newmtl LM_ab_3Ftile
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_3Ftile_Alb.png
+	map_Kd LM_ab_3Ftile_Alb.png
+	map_d LM_ab_3Ftile_Alb.png
+
+newmtl LM_se_2FGate_Lamp_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_magmat01_Alb.png
+	map_Kd LM_hy_magmat01_Alb.png
+	map_d LM_hy_magmat01_Alb.png
+
+newmtl LM_se_2FGate_Lamp_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_magmat01_Alb.png
+	map_Kd LM_hy_magmat01_Alb.png
+	map_d LM_hy_magmat01_Alb.png
+
+newmtl LM_hy_Wood_hh_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_Wood_hh01_Alb.png
+	map_Kd LM_hy_Wood_hh01_Alb.png
+	map_d LM_hy_Wood_hh01_Alb.png
+
+newmtl LM_wk_deco1_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco1_Alb.png
+	map_Kd LM_wk_deco1_Alb.png
+	map_d LM_wk_deco1_Alb.png
+
+newmtl LM_deco0_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_deco0_Alb.png
+	map_Kd LM_deco0_Alb.png
+	map_d LM_deco0_Alb.png
+
+newmtl LM_wk_deco1_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco1_Alb.png
+	map_Kd LM_wk_deco1_Alb.png
+	map_d LM_wk_deco1_Alb.png
+
+newmtl LM_wk_deco3_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco3_Alb.png
+	map_Kd LM_wk_deco3_Alb.png
+	map_d LM_wk_deco3_Alb.png
+
+newmtl LM_Wood_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_Wood_Alb.png
+	map_Kd LM_Wood_Alb.png
+	map_d LM_Wood_Alb.png
+
+newmtl LM_ns_deco0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ns_deco0_Alb.png
+	map_Kd LM_ns_deco0_Alb.png
+	map_d LM_ns_deco0_Alb.png
+
+newmtl LM_hy_road01_G_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_road01_darkGreen_Alb.png
+	map_Kd LM_hy_road01_darkGreen_Alb.png
+	map_d LM_hy_road01_darkGreen_Alb.png
+
+newmtl LM_InsideWall3w_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wall_inside3w_Alb.png
+	map_Kd LM_wall_inside3w_Alb.png
+	map_d LM_wall_inside3w_Alb.png
+
+newmtl LM_floor_check_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_floor_check_Alb.png
+	map_Kd LM_hy_floor_check_Alb.png
+	map_d LM_hy_floor_check_Alb.png
+
+newmtl LM_ab_wall1_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wall1_Alb.png
+	map_Kd LM_wall1_Alb.png
+	map_d LM_wall1_Alb.png
+
+newmtl LM_hy_wood01_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_wood01_Alb.png
+	map_Kd LM_hy_wood01_Alb.png
+	map_d LM_hy_wood01_Alb.png
+
+newmtl LM_curtain_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_magmat02_Alb.png
+	map_Kd LM_hy_magmat02_Alb.png
+	map_d LM_hy_magmat02_Alb.png
+
+newmtl LM_curtain_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_magmat02_Alb.png
+	map_Kd LM_hy_magmat02_Alb.png
+	map_d LM_hy_magmat02_Alb.png
+
+newmtl LM_ab_1FShokudaiDaiza_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_magmat04_Alb.png
+	map_Kd LM_hy_magmat04_Alb.png
+	map_d LM_hy_magmat04_Alb.png
+
+newmtl LM_ab_1FShokudaiDaiza_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_magmat04_Alb.png
+	map_Kd LM_hy_magmat04_Alb.png
+	map_d LM_hy_magmat04_Alb.png
+
+newmtl LM_Wood_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_Wood_Alb.png
+	map_Kd LM_Wood_Alb.png
+	map_d LM_Wood_Alb.png
+
+newmtl LM_wk_deco3_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco3_Alb.png
+	map_Kd LM_wk_deco3_Alb.png
+	map_d LM_wk_deco3_Alb.png
+
+newmtl LM_HouseWall1_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_HouseWall1_Alb.png
+	map_Kd LM_hy_HouseWall1_Alb.png
+	map_d LM_hy_HouseWall1_Alb.png
+
+newmtl LM_ab_HouseWall1_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_HouseWall1_Alb.png
+	map_Kd LM_HouseWall1_Alb.png
+	map_d LM_HouseWall1_Alb.png
+
+newmtl LM_shadow_only
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_emission_Alb.png
+	map_Kd LM_emission_Alb.png
+	map_d LM_emission_Alb.png
+
+newmtl LM_wk_deco1_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco1_Alb.png
+	map_Kd LM_wk_deco1_Alb.png
+	map_d LM_wk_deco1_Alb.png
+
+newmtl LM_TreeTri_Leaf_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_TreeTri_Leaf_Alb.png
+	map_Kd LM_TreeTri_Leaf_Alb.png
+	map_d LM_TreeTri_Leaf_Alb.png
+
+newmtl LM_floor_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_floor_Alb.png
+	map_Kd LM_floor_Alb.png
+	map_d LM_floor_Alb.png
+
+newmtl LM_wk_wall_inside3_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_wall_inside3_Alb.png
+	map_Kd LM_wk_wall_inside3_Alb.png
+	map_d LM_wk_wall_inside3_Alb.png
+
+newmtl LM_hy_holefloor01_a1_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_se_bigmark00_Alb.png
+	map_Kd LM_se_bigmark00_Alb.png
+	map_d LM_se_bigmark00_Alb.png
+
+newmtl LM_ab_3FRoofPiller
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_3FRoofPiller_Alb.png
+	map_Kd LM_ab_3FRoofPiller_Alb.png
+	map_d LM_ab_3FRoofPiller_Alb.png
+
+newmtl nbc_Road_t01_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_road2_Alb.png
+	map_Kd LM_road2_Alb.png
+	map_d LM_road2_Alb.png
+
+newmtl LM_1FWallPiller
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_magmat03_Alb.png
+	map_Kd LM_hy_magmat03_Alb.png
+	map_d LM_hy_magmat03_Alb.png
+
+newmtl LM_deco0_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_deco0_Alb.png
+	map_Kd LM_deco0_Alb.png
+	map_d LM_deco0_Alb.png
+
+newmtl LM_hy_kumo_0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_magmat02_Alb.png
+	map_Kd LM_hy_magmat02_Alb.png
+	map_d LM_hy_magmat02_Alb.png
+
+newmtl LM_ab_StartGate_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_StartGate_Alb.png
+	map_Kd LM_hy_StartGate_Alb.png
+	map_d LM_hy_StartGate_Alb.png
+
+newmtl LM_ab_3FWindow
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_3FWindow_Alb.png
+	map_Kd LM_ab_3FWindow_Alb.png
+	map_d LM_ab_3FWindow_Alb.png
+
+newmtl LM_Wood_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_Wood_Alb.png
+	map_Kd LM_Wood_Alb.png
+	map_d LM_Wood_Alb.png
+
+newmtl LM_wk_deco1_a1_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco1_Alb.png
+	map_Kd LM_wk_deco1_Alb.png
+	map_d LM_wk_deco1_Alb.png
+
+newmtl LM_Door_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_Door_Alb.png
+	map_Kd LM_Door_Alb.png
+	map_d LM_Door_Alb.png
+
+newmtl LM_se_2FGate_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_se_2FGate_Alb.png
+	map_Kd LM_se_2FGate_Alb.png
+	map_d LM_se_2FGate_Alb.png
+
+newmtl LM_HouseWall1_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_HouseWall1_Alb.png
+	map_Kd LM_HouseWall1_Alb.png
+	map_d LM_HouseWall1_Alb.png
+
+newmtl LM_window2_inside_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_window_Alb.png
+	map_Kd LM_window_Alb.png
+	map_d LM_window_Alb.png
+
+newmtl LM_ok_Chandelier_S_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ok_Chandelier_S_Alb.png
+	map_Kd LM_ok_Chandelier_S_Alb.png
+	map_d LM_ok_Chandelier_S_Alb.png
+
+newmtl LM_se_Pillarbig_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_se_Pillarbig_Alb.png
+	map_Kd LM_se_Pillarbig_Alb.png
+	map_d LM_se_Pillarbig_Alb.png
+
+newmtl LM_emission00_chandelia_ref_2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_emission_Alb.png
+	map_Kd LM_emission_Alb.png
+	map_d LM_emission_Alb.png
+
+newmtl LM_ab_3FLamp
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_3Flamp_Alb.png
+	map_Kd LM_ab_3Flamp_Alb.png
+	map_d LM_ab_3Flamp_Alb.png
+
+newmtl LM_ab_3FLamp_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_3Flamp_Alb.png
+	map_Kd LM_ab_3Flamp_Alb.png
+	map_d LM_ab_3Flamp_Alb.png
+
+newmtl LM_emission00_chandelia_ref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_emission_Alb.png
+	map_Kd LM_emission_Alb.png
+	map_d LM_emission_Alb.png
+
+newmtl LM_mountain_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_mountain.png
+	map_Kd LM_mountain.png
+	map_d LM_mountain.png
+
+newmtl LM_ab_HouseRoof_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_HouseRoof_Alb.png
+	map_Kd LM_HouseRoof_Alb.png
+	map_d LM_HouseRoof_Alb.png
+
+newmtl LM_ab_HouseWall0_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_HouseWall_Alb.png
+	map_Kd LM_HouseWall_Alb.png
+	map_d LM_HouseWall_Alb.png
+
+newmtl LM_distantview_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_treecombo.png
+	map_Kd LM_treecombo.png
+	map_d LM_treecombo.png
+
+newmtl LM_ok_Picture_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ok_Picture_Alb.png
+	map_Kd LM_ok_Picture_Alb.png
+	map_d LM_ok_Picture_Alb.png
+
+newmtl LM_ok_Picture_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ok_Picture_Alb.png
+	map_Kd LM_ok_Picture_Alb.png
+	map_d LM_ok_Picture_Alb.png
+
+newmtl LM_bookshelf_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_bookshelf_Alb.png
+	map_Kd LM_bookshelf_Alb.png
+	map_d LM_bookshelf_Alb.png
+
+newmtl LM_ab_HouseWall0g_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_HouseWall__g_Alb.png
+	map_Kd LM_HouseWall__g_Alb.png
+	map_d LM_HouseWall__g_Alb.png
+
+newmtl LM_ceiling_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ceiling_Alb.png
+	map_Kd LM_ceiling_Alb.png
+	map_d LM_ceiling_Alb.png
+
+newmtl LM_ceiling_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ceiling_Alb.png
+	map_Kd LM_ceiling_Alb.png
+	map_d LM_ceiling_Alb.png
+
+newmtl LM_wk_window1_a0ref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_window1_a0_Alb.png
+	map_Kd LM_wk_window1_a0_Alb.png
+	map_d LM_wk_window1_a0_Alb.png
+
+newmtl LM_wk_deco2_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco2_a0_Alb.png
+	map_Kd LM_wk_deco2_a0_Alb.png
+	map_d LM_wk_deco2_a0_Alb.png
+
+newmtl LM_window2_inside_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_window_Alb.png
+	map_Kd LM_window_Alb.png
+	map_d LM_window_Alb.png
+
+newmtl LM_hy_holefloor02_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_holefloor02_Alb.png
+	map_Kd LM_hy_holefloor02_Alb.png
+	map_d LM_hy_holefloor02_Alb.png
+
+newmtl LM_wk_wall_inside3_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_wall_inside3_Alb.png
+	map_Kd LM_wk_wall_inside3_Alb.png
+	map_d LM_wk_wall_inside3_Alb.png
+
+newmtl LM_wk_window1_a1ref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_window1_a0_Alb.png
+	map_Kd LM_wk_window1_a0_Alb.png
+	map_d LM_wk_window1_a0_Alb.png
+
+newmtl LM_hy_wood2_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_wood2_Alb.png
+	map_Kd LM_hy_wood2_Alb.png
+	map_d LM_hy_wood2_Alb.png
+
+newmtl LM_road2_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_road2_Alb.png
+	map_Kd LM_road2_Alb.png
+	map_d LM_road2_Alb.png
+
+newmtl LM_floor_check_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_floor_check_Alb.png
+	map_Kd LM_floor_check_Alb.png
+	map_d LM_floor_check_Alb.png
+
+newmtl LM_ab_wall2_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wall2_Alb.png
+	map_Kd LM_wall2_Alb.png
+	map_d LM_wall2_Alb.png
+
+newmtl LM_ab_3FRoofPillerM
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_3FRoofPillerM_Alb.png
+	map_Kd LM_ab_3FRoofPillerM_Alb.png
+	map_d LM_ab_3FRoofPillerM_Alb.png
+
+newmtl LM_HouseWall0_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_HouseWall_Alb.png
+	map_Kd LM_HouseWall_Alb.png
+	map_d LM_HouseWall_Alb.png
+
+newmtl LM_hy_holefloor02_a1_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_holefloor02_Alb.png
+	map_Kd LM_hy_holefloor02_Alb.png
+	map_d LM_hy_holefloor02_Alb.png
+
+newmtl LM_wk_wall_inside3_a1_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_wall_inside3_Alb.png
+	map_Kd LM_wk_wall_inside3_Alb.png
+	map_d LM_wk_wall_inside3_Alb.png
+
+newmtl LM_wk_roadWood_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_roadWood_a0_Alb.png
+	map_Kd LM_wk_roadWood_a0_Alb.png
+	map_d LM_wk_roadWood_a0_Alb.png
+
+newmtl LM_wall2_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wall2_Alb.png
+	map_Kd LM_wall2_Alb.png
+	map_d LM_wall2_Alb.png
+
+newmtl LM_hy_road01_Y_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_road01_yellow_Alb.png
+	map_Kd LM_hy_road01_yellow_Alb.png
+	map_d LM_hy_road01_yellow_Alb.png
+
+newmtl LM_InsideWall3w
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wall_inside3w_Alb.png
+	map_Kd LM_wall_inside3w_Alb.png
+	map_d LM_wall_inside3w_Alb.png
+
+newmtl LM_ab_RoofGlass_B_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_RoofGlass_Alb.png
+	map_Kd LM_ab_RoofGlass_Alb.png
+	map_d LM_ab_RoofGlass_Alb.png
+
+newmtl LM_ab_RoofGlass_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_RoofGlass_Alb.png
+	map_Kd LM_ab_RoofGlass_Alb.png
+	map_d LM_ab_RoofGlass_Alb.png
+
+newmtl LM_wk_deco2_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_deco2_a0_Alb.png
+	map_Kd LM_wk_deco2_a0_Alb.png
+	map_d LM_wk_deco2_a0_Alb.png
+
+newmtl LM_hy_holefloor01_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_se_bigmark00_Alb.png
+	map_Kd LM_se_bigmark00_Alb.png
+	map_d LM_se_bigmark00_Alb.png
+
+newmtl LM_hy_wood2_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_wood2_Alb.png
+	map_Kd LM_hy_wood2_Alb.png
+	map_d LM_hy_wood2_Alb.png
+
+newmtl LM_se_2FGate_a0
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_se_2FGate_Alb.png
+	map_Kd LM_se_2FGate_Alb.png
+	map_d LM_se_2FGate_Alb.png
+
+newmtl LM_ceiling_old_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ceiling_old_Alb.png
+	map_Kd LM_ceiling_old_Alb.png
+	map_d LM_ceiling_old_Alb.png
+
+newmtl LM_ab_wall0_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wall0_Alb.png
+	map_Kd LM_wall0_Alb.png
+	map_d LM_wall0_Alb.png
+
+newmtl LM_ab_3FRoofHandRail
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_ab_3FRoofHandrail_Alb.png
+	map_Kd LM_ab_3FRoofHandrail_Alb.png
+	map_d LM_ab_3FRoofHandrail_Alb.png
+
+newmtl nbc_Road_t01_a0_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_road2_Alb.png
+	map_Kd LM_road2_Alb.png
+	map_d LM_road2_Alb.png
+
+newmtl LM_ab_HouseWall0g_a2_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_HouseWall__g_Alb.png
+	map_Kd LM_HouseWall__g_Alb.png
+	map_d LM_HouseWall__g_Alb.png
+
+newmtl LM_hy_road01_G_a0_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_road01_darkGreen_Alb.png
+	map_Kd LM_hy_road01_darkGreen_Alb.png
+	map_d LM_hy_road01_darkGreen_Alb.png
+
+newmtl LM_wk_roadWood_a0_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_wk_roadWood_a0_Alb.png
+	map_Kd LM_wk_roadWood_a0_Alb.png
+	map_d LM_wk_roadWood_a0_Alb.png
+
+newmtl LM_hy_road01_Right_a0_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_road01_yellow_Alb.png
+	map_Kd LM_hy_road01_yellow_Alb.png
+	map_d LM_hy_road01_yellow_Alb.png
+
+newmtl LM_hy_wallrust00_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_wallrust00_Alb.png
+	map_Kd LM_hy_wallrust00_Alb.png
+	map_d LM_hy_wallrust00_Alb.png
+
+newmtl LM_emission00_parts
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_emission_Alb.png
+	map_Kd LM_emission_Alb.png
+	map_d LM_emission_Alb.png
+
+newmtl LM_floor_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_floor_Alb.png
+	map_Kd LM_floor_Alb.png
+	map_d LM_floor_Alb.png
+
+newmtl LM_hy_road01_a1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_road01_redLeft_Alb.png
+	map_Kd LM_hy_road01_redLeft_Alb.png
+	map_d LM_hy_road01_redLeft_Alb.png
+
+newmtl LM_hy_road01_a1_mref
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_road01_green_Alb.png
+	map_Kd LM_hy_road01_green_Alb.png
+	map_d LM_hy_road01_green_Alb.png
+
+newmtl LM_hy_floor01_a2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_hy_floor01_Alb.png
+	map_Kd LM_hy_floor01_Alb.png
+	map_d LM_hy_floor01_Alb.png
+
+newmtl LM_emission00_parts_strong
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka LM_emission_Alb.png
+	map_Kd LM_emission_Alb.png
+	map_d LM_emission_Alb.png

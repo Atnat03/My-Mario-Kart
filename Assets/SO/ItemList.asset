@@ -29,3 +29,7 @@ MonoBehaviour:
     name: Mushroom
     prefab: {fileID: 5044382480411808204, guid: 99d4ff95dee53854f849549619437556, type: 3}
     prefabVisual: {fileID: 5310329881752751428, guid: 0e47bf400a133fc48b267244d3da4eb5, type: 3}
+  - id: 4
+    name: Bomb
+    prefab: {fileID: 8111622828493145166, guid: 509ae0209c374b4428d2f27679a78987, type: 3}
+    prefabVisual: {fileID: 2584710352905804142, guid: 2df33df27da49684b9a5cb48eaeec5b9, type: 3}

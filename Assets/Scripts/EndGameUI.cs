@@ -14,6 +14,9 @@ public class EndGameUI : NetworkBehaviour
     [SerializeField] private Button _quitButton;
     [SerializeField] private Sprite[] _ranks;
     [SerializeField] private Sprite[] _logoPersoList;
+    
+    [Header("Camera")]
+    [SerializeField] private GameObject _cameraEnd;
 
     public override void OnNetworkSpawn()
     {
@@ -23,6 +26,21 @@ public class EndGameUI : NetworkBehaviour
     public void ActivateEndGameUI(List<PlayerDataScore> players)
     {
         UpdateUIClientRpc(players.ToArray());
+    }
+
+    public void IntantiateCamera()
+    {
+        IntantiateCameraClientRpc();
+    }
+
+    [Rpc(SendTo.Everyone)]
+    void IntantiateCameraClientRpc()
+    {
+        Transform t = GameManager.instance.ScoreManager.GetFirstPlayer();
+
+        t.gameObject.GetComponent<PlayerHealth>().UpdateBalloon();
+        
+        Instantiate(_cameraEnd, t.transform.position, t.transform.rotation);
     }
 
     [ClientRpc]

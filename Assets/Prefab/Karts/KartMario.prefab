@@ -31653,8 +31653,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7000065, y: 0.87879074, z: 1.472716}
-  m_Center: {x: 0.010605812, y: 0.44544405, z: 0.039393127}
+  m_Size: {x: 0.7000065, y: 0.7361964, z: 1.3609667}
+  m_Center: {x: 0.010605812, y: 0.5167412, z: -0.016481489}
 --- !u!1 &8241988662755283417
 GameObject:
   m_ObjectHideFlags: 0
@@ -32265,6 +32265,8 @@ GameObject:
   - component: {fileID: 7843278814580078606}
   - component: {fileID: 5059006983698719421}
   - component: {fileID: 7830471396374751846}
+  - component: {fileID: 141156471965161187}
+  - component: {fileID: 1964182686146438086}
   m_Layer: 7
   m_Name: KartMario
   m_TagString: Untagged
@@ -32305,7 +32307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2285996071
+  GlobalObjectIdHash: 1437777509
   InScenePlacedSourceGlobalObjectIdHash: 1437777509
   DeferredDespawnTick: 0
   Ownership: 1
@@ -32503,6 +32505,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9eb9d645b8620164090df20aa19aaf06, type: 3}
   - {fileID: 21300000, guid: f341f9f7d20f02446b95b7dccf0351f5, type: 3}
   - {fileID: 21300000, guid: a6ba6b2622a4f704b8764b561183f65d, type: 3}
+  - {fileID: 21300000, guid: c77254464bb947440ad59b7500c9d20b, type: 3}
+  currentItemId:
+    UpdateTraits:
+      MinSecondsBetweenUpdates: 0
+      MaxSecondsBetweenUpdates: 0
+    m_InternalValue: -1
+  hasItem:
+    UpdateTraits:
+      MinSecondsBetweenUpdates: 0
+      MaxSecondsBetweenUpdates: 0
+    m_InternalValue: 0
 --- !u!114 &5059006983698719421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32574,6 +32587,51 @@ MonoBehaviour:
   _balloonExplose: {fileID: 4553287630450876387, guid: 15483e51212e3d74886ea57291f4639a, type: 3}
   _deathParticle: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
   _looseScore: 25
+--- !u!114 &141156471965161187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053285810622440314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: a580735d83ff86242842dbb3669ee538, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Kart
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1964182686146438086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053285810622440314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c992120f10d4980996d3b1153446936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputMapping
+  _playerInput: {fileID: 141156471965161187}
+  _kartController: {fileID: 41432233725332232}
+  _playerItem: {fileID: 7843278814580078606}
 --- !u!1 &9077525495867122574
 GameObject:
   m_ObjectHideFlags: 0

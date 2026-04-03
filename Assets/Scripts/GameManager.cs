@@ -15,6 +15,7 @@ public class GameManager : NetworkBehaviour
     #region Properties
 
     public SpawnPlayer SpawnPlayer => _spawnPlayer;
+    public ScoreManager ScoreManager => scoreManager;
     
     #endregion
 
@@ -211,5 +212,9 @@ public class GameManager : NetworkBehaviour
         OnEndGameUI?.Invoke();
         
         _endGameManager.ActivateEndGameUI(data);
+        
+        if(IsServer)
+            _endGameManager.IntantiateCamera();
+        
     }
 }

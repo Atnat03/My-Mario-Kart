@@ -78,7 +78,7 @@ MonoBehaviour:
   _scoreGain: 15
   rb: {fileID: 1306856062223318836}
   timeStun: 1.5
-  force: 20
+  force: 15
 --- !u!54 &1306856062223318836
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -18,13 +18,16 @@ public class Banana : ItemFactory, IItem
     private void DropItemRpc(Vector3 direction, bool isFront)
     {
         rb.isKinematic = false;
-    
+
         if (isFront)
-            direction += Vector3.up * 0.5f;
+        {
+            rb.AddForce(direction * force + Vector3.up * 3f, ForceMode.Impulse);
+        }
         else
+        {
             direction.z *= 0.2f;
-    
-        rb.AddForce(direction * force, ForceMode.Impulse);
+            rb.AddForce(direction * force, ForceMode.Impulse);
+        }
     }
 
     public override void ApplyEffect(KartController controller)
